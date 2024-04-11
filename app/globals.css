@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Avenir Next Condensed";
+  font-style: normal;
+  src: url("/avenir-next-condensed-heavy.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Avenir Next Condensed";
+  font-style: italic;
+  src: url("/avenir-next-condensed-heavy-italic.ttf") format("truetype");
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: "Avenir Next Condensed", sans-serif;
+
+  min-height: 100svh;
+  @apply flex flex-col;
+
+  color: white;
+  background: #231f20;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .wrap {
+    @apply w-full px-5 lg:px-8 xl:px-10 mx-auto;
+    max-width: 1880px;
+  }
+}
+.gradient {
+  background: linear-gradient(90deg, #ff5143 0%, #a232ff 100%);
+}
+.frame {
+  background: linear-gradient(90deg, #ff5143 0%, #a232ff 100%);
+  position: relative;
+}
+.win-2-tickets::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: #231f20;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  z-index: 0;
+}
+.submit {
+  color: rgba(0, 0, 0, 0);
+  background: linear-gradient(90deg, #ff5143 0%, #a232ff 0%, #fff 0%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+}
+.submit:hover {
+  color: rgba(0, 0, 0, 0);
+  background: linear-gradient(90deg, #ff5143 0%, #a232ff 100%, #fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 2s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
