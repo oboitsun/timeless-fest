@@ -2,7 +2,6 @@
 import axios from "axios";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Dropdown from "./Dropdown";
 const items = {
   Australia: {
     locations: ["Queensland", "New South Wales", "Western Australia", "Victoria"],
@@ -64,6 +63,10 @@ export default function ContactForm() {
       className="flex flex-col gap-4 lg:gap-6 gradient p-5 xl:p-10   w-full  lg:text-40  darma-e text-2xl relative">
       {!submitted ? (
         <>
+          <p className="uppercase leading-none text-lg xl:text-[32px]">
+            Be the first to know...
+            <br /> Enter your info below.
+          </p>
           <input
             id="emails"
             placeholder="quantity"
@@ -80,7 +83,7 @@ export default function ContactForm() {
             required
           />
 
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <input
               id="name"
               placeholder="First Name"
@@ -150,14 +153,12 @@ export default function ContactForm() {
             className="border border-white h-12 lg:h-16   bg-transparent w-full  px-3 xl:px-6 placeholder:uppercase placeholder:text-white text-mustard caret-mustard uppercase outline-none "
             type="text"
             name="invite"
-          />
+          /> */}
           <button
             type="submit"
             disabled={submitted}
             className="bg-black text-center h-14  w-full  text-white lg:text-40 px-3 xl:px-6  lg:px-8 flex-shrink-0 uppercase    ">
-            <span className="submit">
-              {submitted ? "Thank You for application" : "STAY UPDATED"}
-            </span>
+            <span className="submit">{submitted ? "Thank You for application" : "Subscribe"}</span>
           </button>
         </>
       ) : (
