@@ -4,17 +4,16 @@ export async function POST(req) {
 
   const subscriber_hash = crypto.createHash("md5").update(email.toLowerCase()).digest("hex");
 
-  console.log(email, fname, lname, tag);
   const axios = require("axios");
   let data = JSON.stringify([
     {
       id: email.toLowerCase(),
-      "first-name": fname,
-      "last-name": lname,
+      // "first-name": fname,
+      // "last-name": lname,
       "email-address": email.toLowerCase(),
-      city: location,
-      country: country,
-      tags: [tag],
+      // city: location,
+      // country: country,
+      // tags: [tag],
     },
   ]);
 
