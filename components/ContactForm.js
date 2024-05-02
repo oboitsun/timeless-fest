@@ -163,8 +163,7 @@ export default function ContactForm() {
         </>
       ) : (
         <p className="text-3xl lg:text-40 leading-none  tracking-[2%] text-center uppercase text-balance  py-5 ">
-          You will be one of the first to receive updates and announcements for Timeless Fest
-          &apos;25. 📢🎉
+          Thanks, we will be in touch
         </p>
       )}
     </motion.form>
