@@ -1,5 +1,6 @@
+import Image from "next/image";
+import crowd from "../assets/crowd.jpg";
 import ContactForm from "../components/ContactForm";
-import CloudinaryImgWrapper from "../components/UI/CloudinaryImgWrapper";
 
 export default function Home() {
   return (
@@ -25,13 +26,14 @@ export default function Home() {
           <ContactForm />
         </div>
         <div className="relative w-full h-full ">
-          <CloudinaryImgWrapper
-            width={1440}
-            height={416}
-            loader="blur"
-            src="/timeless-fest-crowd.jpg"
+          <Image
+            width={crowd.width}
+            height={crowd.height}
+            placeholder="blur"
+            src={crowd}
             sizes="(min-width:1024px) 90vw, 100vw"
             className="object-cover h-full"
+            alt="Crowd"
           />
         </div>
       </div>
