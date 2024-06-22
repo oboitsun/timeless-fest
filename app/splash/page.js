@@ -1,6 +1,6 @@
 import Image from "next/image";
+import crowd from "../../assets/crowd.jpg";
 import ContactForm from "../../components/ContactForm";
-import crowd from "../assets/crowd.jpg";
 
 export default function Home() {
   return (

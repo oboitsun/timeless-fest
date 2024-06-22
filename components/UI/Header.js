@@ -75,7 +75,7 @@ export default function Header() {
           <div className={styles["line-bottom"]}></div>
         </button>
         <div
-          className={`xl:w-1/2 flex-shrink xl:static fixed top-0 right-0 w-3/5 max-xl:flex-col  max-xl:bg-pale-gray max-xl:h-dvh max-xl:pt-14 max-xl:px-8 xl:hidden transition-all ${
+          className={`xl:w-1/2 flex-shrink xl:static fixed top-0 right-0 w-4/5 max-xl:flex-col  max-xl:bg-pale-gray max-xl:h-svh max-xl:pt-14 max-xl:px-8 xl:hidden transition-all ${
             open ? "max-xl:translate-x-0" : "max-xl:translate-x-full"
           }`}>
           <div className="xl:hidden flex flex-col gap-8 text-black">
@@ -91,7 +91,7 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div className="flex flex-col xl:flex-row ">
+          <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end">
             <Link
               href="/"
               className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
@@ -99,7 +99,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row ">
+        <div className="flex flex-col xl:flex-row max-xl:hidden">
           <Link
             href="/"
             className="bg-primary hover:bg-black uppercase py-4 px-6 text-xl  font-matiz flex w-max text-black hover:text-primary transition-all ">
