@@ -1,16 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: "Avenir Next Condensed";
-  font-style: normal;
-  src: url("/avenir-next-condensed-heavy.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Avenir Next Condensed";
-  font-style: italic;
-  src: url("/avenir-next-condensed-heavy-italic.ttf") format("truetype");
-}
+
+
+
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -25,12 +20,16 @@
   }
 }
 
+@font-face {
+  font-family: "Matiz";
+  src: url("/Matiz.ttf")format("truetype"),
+}
+
 body {
-  font-family: "Avenir Next Condensed", sans-serif;
-
+  @apply relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   min-height: 100svh;
-  @apply flex flex-col;
-
   color: white;
   background: #231f20;
 }
@@ -39,18 +38,39 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
   .wrap {
     @apply w-full px-5 lg:px-8 xl:px-10 mx-auto;
-    max-width: 1880px;
+    max-width: 1700px;
   }
 }
-.gradient {
-  background: linear-gradient(90deg, #ff5143 0%, #a232ff 100%);
+
+img {
+  max-width: unset;
 }
+
+.section {
+  @apply bg-pale-gray relative w-full max-lg:pt-20 py-10 lg:py-14 xl:py-20;
+
+  background: #f0ece4 url("../assets/vintage-texture.png");
+}
+
+.gradient {
+  background: linear-gradient(180deg, #000000 33%, #F68F27 100%);
+}
+
 .frame {
   background: linear-gradient(90deg, #ff5143 0%, #a232ff 100%);
   position: relative;
 }
+
+.heading {
+
+  @apply font-back uppercase text-black leading-none;
+  font-size: clamp(18px, 5vw, 80px);
+
+}
+
 .win-2-tickets::after {
   content: "";
   position: absolute;
@@ -62,6 +82,7 @@ body {
   width: calc(100% - 10px);
   z-index: 0;
 }
+
 .submit {
   color: rgba(0, 0, 0, 0);
   background: linear-gradient(90deg, #ff5143 0%, #a232ff 0%, #fff 0%);
@@ -71,6 +92,7 @@ body {
   text-fill-color: transparent;
   background-size: 200% auto;
 }
+
 .submit:hover {
   color: rgba(0, 0, 0, 0);
   background: linear-gradient(90deg, #ff5143 0%, #a232ff 100%, #fff 100%);
@@ -86,6 +108,7 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 100% 50%;
   }

@@ -1,0 +1,55 @@
+.inner {
+  @apply absolute w-10/12   z-10  left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-wrap  justify-center lg:justify-between items-center;
+  max-width: 1204px;
+  top: 47%;
+  height: 75%;
+  .hat {
+    width: 15%;
+  }
+  .freeHat {
+    @apply font-back text-primary uppercase leading-none;
+    flex: 0 1 52%;
+    font-size: clamp(18px, 10vw, 80px);
+  }
+  .tickets {
+    @apply max-lg:text-center;
+    width: 100%;
+    font-size: clamp(12px, 3vw, 22px);
+    font-weight: 600;
+  }
+  .buy {
+    width: 51%;
+    @apply bg-primary hover:bg-black font-matiz uppercase text-black hover:text-primary text-center flex justify-center items-center leading-none;
+    font-size: clamp(14px, 3vw, 22px);
+    height: 21%;
+    span {
+      position: relative;
+      transform: translateY(16%);
+    }
+  }
+  @media (min-width: 1024px) {
+    .hat {
+      width: 14.5%;
+    }
+    .freeHat {
+      @apply font-back text-primary uppercase leading-none;
+      flex: 0 1 26.1%;
+      font-size: clamp(18px, 5vw, 80px);
+    }
+    .tickets {
+      width: 32%;
+      font-size: clamp(12px, 3vw, 22px);
+      font-weight: 600;
+    }
+    .buy {
+      width: 13%;
+      @apply bg-primary font-matiz uppercase text-black text-center flex justify-center items-center leading-none;
+      font-size: clamp(14px, 3vw, 22px);
+      height: 21%;
+      span {
+        position: relative;
+        transform: translateY(16%);
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.h1 {
+  @apply font-back text-6xl uppercase text-pale-gray leading-none;
+  font-size: clamp(24px, 6vw, 104px);
+}
+.p {
+  @apply font-matiz text-6xl uppercase text-primary leading-none;
+  font-size: clamp(18px, 5vw, 80px);
+}

@@ -1,42 +1,15 @@
-import Image from "next/image";
-import crowd from "../assets/crowd.jpg";
-import ContactForm from "../components/ContactForm";
+import AboutSection from "../components/Sections/AboutSection";
+import FreeHatSection from "../components/Sections/FreeHatSection";
+import HeroSection from "../components/Sections/HeroSection";
+import VenuesSection from "../components/Sections/VenuesSection";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <section className="w-full h-full flex-grow flex ">
-      <div className="wrap grid max-xl:grid-rows-[max-content,1fr] flex-grow xl:grid-cols-[max-content,1fr] gap-5 lg:gap-7 xl:gap-10 2xl:gap-20  py-5 lg:py-10 2xl:py-14">
-        <div className="w-full lg:w-[clamp(480px,50vw,560px)] flex flex-col gap-5 justify-center mx-auto">
-          <h1 className="italic uppercase text-center text-lg lg:text-2xl">
-            Creating Timeless Live music and entertainment experiences that convert into forever
-            memories
-          </h1>
-          <div className="frame w-full py-2 px-4 lg:px-7 lg:py-4 xl:px-10 xl:py-6 flex  justify-center items-center win-2-tickets">
-            {/* <CloudinaryImgWrapper
-              width="80"
-              height="80"
-              className="w-20 relative z-10"
-              src="/timeless-fest-tickets.png"
-              sizes="(min-width:1024px) 10vw, 20vw"
-            /> */}
-            <h3 className="uppercase text-center text-lg lg:text-2xl gap-5 relative z-10">
-              Fill out your email to stay updated{" "}
-            </h3>
-          </div>
-          <ContactForm />
-        </div>
-        <div className="relative w-full h-full ">
-          <Image
-            width={crowd.width}
-            height={crowd.height}
-            placeholder="blur"
-            src={crowd}
-            sizes="(min-width:1024px) 90vw, 100vw"
-            className="object-cover h-full"
-            alt="Crowd"
-          />
-        </div>
-      </div>
-    </section>
+    <>
+      <HeroSection />
+      <FreeHatSection />
+      <VenuesSection />
+      <AboutSection />
+    </>
   );
 }
