@@ -59,35 +59,9 @@ const childVariants = {
     y: "200%", // example custom property
   }),
 };
-export default function Venue({ venue }) {
-  const {
-    title,
-    photo,
-    gaInclusions,
-    gaPrices,
-    vipPrices,
-    vipInclusions,
-    platinumPrices,
-    platinumInlcusions,
-  } = venue?.fields || {};
+export default function VenueSetTimes({ venue }) {
+  const { title, photo, setTimes } = venue?.fields || {};
 
-  const tiers = [
-    {
-      id: "ga",
-      prices: gaPrices,
-      inclusions: gaInclusions,
-    },
-    {
-      id: "vip",
-      prices: vipPrices,
-      inclusions: vipInclusions,
-    },
-    {
-      id: "platinum",
-      prices: platinumPrices,
-      inclusions: platinumInlcusions,
-    },
-  ];
   return (
     <div className="w-full flex flex-col gap-5 xl:gap-10">
       <motion.div
@@ -109,38 +83,27 @@ export default function Venue({ venue }) {
           10am - 12pm
         </motion.p>
       </motion.div>
-      {tiers.map((tier, i) =>
-        tier.prices ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: (i + 1) * 0.5 }}
-            key={tier.id}
-            className="w-full flex max-lg:flex-col gap-5 xl:gap-10 2xl:gap-16 bg-white p-5 lg:p-7 xl:p-10  ">
-            <div className="flex flex-col w-fit xl:min-w-max ">
-              <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter">
-                {tier.id} Price:
-              </p>
-              <div className={"text-black mt-5 lg:text-xl"}>
-                {documentToReactComponents(tier?.prices, options)}
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="w-full flex flex-col gap-2 bg-white px-5 lg:px-7 xl:px-10 py-5 ">
+        {setTimes ? (
+          setTimes.map((item, i) => {
+            const [name, time] = item.split(";");
+            return (
+              <div
+                key={i}
+                className="w-full flex items-center justify-between py-2 lg:py-3 [&:not(:last-child)]:border-b  font-matiz uppercase text-xl">
+                <p>{name}</p>
+                <p>{time}</p>
               </div>
-            </div>
-            <div className="h-full w-px bg-black/25"></div>
-            <div className="flex flex-col">
-              <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter">
-                {tier.id} Inclusions:
-              </p>
-              <ul className="lg:columns-2 gap-x-4 list-disc">
-                {tier?.inclusions?.map((l, i) => (
-                  <li key={i}>{l}</li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
+            );
+          })
         ) : (
-          <></>
-        )
-      )}
+          <p className="text-7xl font-matiz uppercase text-center mx-auto pt-5"> TBA</p>
+        )}
+      </motion.div>
     </div>
   );
 }

@@ -41,7 +41,10 @@
     }
   }
   .link {
-    @apply font-matiz text-xl uppercase leading-none text-black;
+    @apply font-matiz text-xl uppercase leading-none text-black hover:text-primary;
+    &.active {
+      @apply text-primary;
+    }
   }
 
   @media (min-width: 1280px) {
@@ -53,14 +56,14 @@
       left: 0;
       z-index: 20;
       .link {
-        @apply text-white;
+        @apply text-white hover:text-primary;
       }
     }
     &.fixed.scrolled {
       @apply bg-pale-gray py-2 lg:py-3  border-b-black/25;
       height: 75px;
       .link {
-        @apply text-black;
+        @apply text-black hover:text-primary;
       }
     }
   }

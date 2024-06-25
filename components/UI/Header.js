@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
+import Socials from "./Socials";
 export const links = [
   {
     label: "About",
@@ -15,8 +16,16 @@ export const links = [
     href: "/news",
   },
   {
+    label: "FAQs",
+    href: "/faq",
+  },
+  {
     label: "Artists",
     href: "/artists",
+  },
+  {
+    label: "Set Times",
+    href: "/set-times",
   },
   {
     label: "Tickets",
@@ -50,21 +59,20 @@ export default function Header() {
         scrolled || open ? styles.scrolled : ""
       } overflow-x-hidden`}>
       <div className="wrap flex justify-between items-center gap-10 w-full">
-        <div className="w-1/2 flex flex-shrink justify-between gap-2 max-w-[550px] max-xl:hidden">
+        <Link href="/" className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10">
+          <Image className="w-full " quality="100" width={161} height={99} src={"/logo.png"} />
+        </Link>
+        <div className="w-10/12 flex flex-grow  justify-around gap-2  max-xl:hidden">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`${styles.link} ${location === l.href ? styles.active : ""}`}>
+              className={`${styles.link} min-w-max  ${location === l.href ? styles.active : ""}`}>
               {l.label}
             </Link>
           ))}
         </div>
-        <Link
-          href="/"
-          className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0 xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2  xl:-translate-y-1/2 z-10">
-          <Image className="w-full " quality="100" width={161} height={99} src={"/logo.png"} />
-        </Link>
+
         <button
           onClick={() => {
             setOpen(!open);
@@ -91,15 +99,18 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end">
+          <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end gap-4 items-center">
+           
             <Link
               href="/"
               className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
               Buy Tickets
             </Link>
+            <Socials />
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row max-xl:hidden">
+        <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden">
+          <Socials />
           <Link
             href="/"
             className="bg-primary hover:bg-black uppercase py-4 px-6 text-xl  font-matiz flex w-max text-black hover:text-primary transition-all ">

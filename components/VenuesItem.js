@@ -23,7 +23,7 @@ export default function VenuesItem({ venue, leftSide }) {
   const childVariants = {
     show: {
       opacity: 1,
-      y: "0",
+      y: "-50%",
       x: "-50%",
 
       letterSpacing: "0.1em",
@@ -53,6 +53,8 @@ export default function VenuesItem({ venue, leftSide }) {
         <Image fill src={venue.img} alt={venue.city} className="object-cover z-[-1]" />
         <motion.p variants={childVariants} className={`${styles.city}`}>
           {venue.city}
+          <br />
+          10am - 12pm
         </motion.p>
       </motion.div>
       <motion.div
