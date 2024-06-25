@@ -2,7 +2,7 @@
   background: #000 url("../../assets/vintage-texture.png");
 }
 .links {
-  @apply flex flex-wrap gap-2  max-w-xs font-matiz text-xl;
+  @apply flex flex-wrap gap-2  xl:gap-8  font-matiz text-xl max-lg:mx-auto max-lg:justify-center;
   p {
     flex: 0 1 calc(33% - 8px);
   }

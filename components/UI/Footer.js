@@ -53,7 +53,7 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <div className="w-px h-16 my-auto flex-shrink-0 bg-white/25 max-xl:hidden"></div>
+        {/* <div className="w-px h-16 my-auto flex-shrink-0 bg-white/25 max-xl:hidden"></div>
         <div className={"max-w-xs font-matiz lg:text-lg xl:text-xl"}>
           <p>
             <span className="text-white/50">Email:</span>{" "}
@@ -68,7 +68,7 @@ export default function Footer() {
           <p>PO Box </p>
           <p> uknown </p>
         </div>
-        <div className="w-px h-16 my-auto flex-shrink-0 bg-white/25 max-xl:hidden"></div>
+        <div className="w-px h-16 my-auto flex-shrink-0 bg-white/25 max-xl:hidden"></div> */}
       </div>
       <div className="w-full border-t border-t-white/25">
         <div className="wrap py-8 font-matiz lg:text-lg xl:text-xl flex max-lg:flex-col max-lg:items-center justify-between gap-2 lg:gap-8">
@@ -78,7 +78,7 @@ export default function Footer() {
               apped.nz
             </a>
           </p>
-          <div className="ml-auto lg:mr-20 ">
+          <div className="mx-auto lg:ml-auto lg:mr-20 ">
             <Socials text="text-white" />
           </div>
         </div>

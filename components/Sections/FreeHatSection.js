@@ -7,11 +7,11 @@ export default function FreeHatSection() {
   const ref = useRef();
   const inView = useInView(ref, { amount: "some", once: true });
   return (
-    <div className="bg-orange lg:pt-10   w-full">
+    <div className="bg-orange   w-full">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: "100%" }}
-        animate={inView ? { opacity: 1, y: "0%" } : { opacity: 0, y: "100%" }}
+        animate={inView ? { opacity: 1, y: "0%" } : { opacity: 1, y: "0%" }}
         transition={{ delay: 0, duration: 0.8, ease: [0, 0.71, 0.2, 1.01] }}
         style={{ maxWidth: "calc(1470px + 80px)" }}
         className="w-full relative flex justify-center  lg:px-10  mx-auto">

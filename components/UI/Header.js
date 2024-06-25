@@ -100,7 +100,6 @@ export default function Header() {
             ))}
           </div>
           <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end gap-4 items-center">
-           
             <Link
               href="/"
               className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
