@@ -42,9 +42,9 @@ export default function PromoModal() {
             width="100%"
             height="100%"
             frameBorder={0}
-            src="https://www.youtube.com/embed/H_ORu9ubzy8?si=h9kMIvKy1bR-i9Ri?mute=0&autoplay=1&controls=1&loop=1"
+            src="https://www.youtube.com/embed/H_ORu9ubzy8?si=h9kMIvKy1bR-i9Ri?mute=0&autoplay=0&controls=1&loop=1"
             title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen></iframe>
         </div>
       </div>
