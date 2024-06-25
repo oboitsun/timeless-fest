@@ -1,12 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import PromoModal from "../PromoModal";
 import styles from "./Hero.module.scss";
 const artists = [
+  { src: "/artists/boy-george.png", name: "Boy George" },
+
+  { src: "/artists/little-river-band.png", name: "Little River Band" },
   { src: "/artists/bonnie-tyler.png", name: "Bonnie Tyler" },
   { src: "/artists/starship.png", name: "Starship" },
-  { src: "/artists/boy-george.png", name: "Boy George" },
-  { src: "/artists/little-river-band.png", name: "Little River Band" },
 ];
 const parentVariants = {
   show: {
@@ -36,14 +38,14 @@ const childVariants = {
 
 export default function HeroSection() {
   return (
-    <section className="xl:h-[95dvh] max-h-[1070px] py-10 pt-20 2xl:py-32 relative gradient flex flex-col ">
+    <section className={`${styles.section} gradient`}>
       <Image
         className="opacity-90 object-cover w-full h-full z-0"
         fill
         src="/vintage-texture.png"
         alt="texture"
       />
-      <div className="wrap flex flex-col items-center justify-center h-1/2 flex-grow relative z-10 ">
+      <div className="wrap flex flex-col items-center justify-center h-1/2 flex-grow relative  ">
         <motion.p
           initial={{ opacity: 0, y: "15%" }}
           transition={{ delay: 0.3 }}
@@ -79,6 +81,9 @@ export default function HeroSection() {
             </motion.div>
           ))}
         </motion.div>
+        <div className=" mt-10">
+          <PromoModal />
+        </div>
       </div>
     </section>
   );

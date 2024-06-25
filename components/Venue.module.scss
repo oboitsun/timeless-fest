@@ -1,5 +1,5 @@
 .city {
   @apply leading-none uppercase font-matiz absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10/12 text-center;
   z-index: 1;
-  font-size: clamp(28px, 4vw, 56px);
+  font-size: clamp(28px, 4vw, 44px);
 }

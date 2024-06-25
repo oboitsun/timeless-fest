@@ -1,15 +1,15 @@
 .inner {
-  @apply absolute w-10/12   z-10  left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-wrap  justify-center lg:justify-between items-center;
+  @apply absolute w-10/12   z-10  left-1/2 -translate-x-1/2 -translate-y-1/2 flex max-lg:flex-col flex-wrap  justify-center lg:justify-between items-center;
   max-width: 1204px;
   top: 47%;
   height: 75%;
   .hat {
-    width: 15%;
+    width: 35%;
   }
   .freeHat {
     @apply font-back text-primary uppercase leading-none;
-    flex: 0 1 52%;
-    font-size: clamp(18px, 10vw, 80px);
+
+    font-size: clamp(18px, 5vw, 60px);
   }
   .tickets {
     @apply max-lg:text-center;
@@ -18,8 +18,9 @@
     font-weight: 600;
   }
   .buy {
-    width: 51%;
-    @apply bg-primary hover:bg-black font-matiz uppercase text-black hover:text-primary text-center flex justify-center items-center leading-none;
+    min-width: max-content;
+    width: 65%;
+    @apply bg-pale-gray  hover:bg-black font-matiz uppercase text-black hover:text-primary text-center flex justify-center items-center leading-none;
     font-size: clamp(14px, 3vw, 22px);
     height: 21%;
     span {
@@ -34,17 +35,17 @@
     .freeHat {
       @apply font-back text-primary uppercase leading-none;
       flex: 0 1 26.1%;
-      font-size: clamp(18px, 5vw, 80px);
+      font-size: clamp(18px, 3vw, 60px);
     }
     .tickets {
-      width: 32%;
-      font-size: clamp(12px, 3vw, 22px);
+      width: 90%;
+      font-size: clamp(12px, 2vw, 22px);
       font-weight: 600;
     }
     .buy {
-      width: 13%;
-      @apply bg-primary font-matiz uppercase text-black text-center flex justify-center items-center leading-none;
-      font-size: clamp(14px, 3vw, 22px);
+      width: 18%;
+      flex-shrink: 0;
+      font-size: clamp(14px, 3vw, 20px);
       height: 21%;
       span {
         position: relative;

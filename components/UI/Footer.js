@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
+import Socials from "./Socials";
 export const links = [
   {
     label: "About",
@@ -11,8 +12,16 @@ export const links = [
     href: "/news",
   },
   {
+    label: "FAQs",
+    href: "/faq",
+  },
+  {
     label: "Artists",
     href: "/artists",
+  },
+  {
+    label: "Set Times",
+    href: "/set-times",
   },
   {
     label: "Tickets",
@@ -27,14 +36,16 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="wrap  py-8 lg:py-16 flex max-xl:flex-wrap gap-5 max-lg:flex-col justify-between items-center">
-        <Image
-          className="w-[10vh] max-w-max flex-shrink-0 mr-10"
-          quality="100"
-          width={161}
-          height={99}
-          src={"/logo.png"}
-          alt="Logo"
-        />
+        <Link href={"/"}>
+          <Image
+            className="w-[10vh] max-w-max flex-shrink-0 mr-10"
+            quality="100"
+            width={161}
+            height={99}
+            src={"/logo.png"}
+            alt="Logo"
+          />
+        </Link>
         <div className={styles.links}>
           {links.map((l) => (
             <Link key={l.href} href={l.href} className="hover:text-primary">
@@ -58,16 +69,18 @@ export default function Footer() {
           <p> Warkworth 0941 </p>
         </div>
         <div className="w-px h-16 my-auto flex-shrink-0 bg-white/25 max-xl:hidden"></div>
-        <div className={"max-w-xs font-matiz lg:text-lg xl:text-xl"}>
-          <p> Instagram </p>
-          <p> Facebook </p>
-        </div>
       </div>
       <div className="w-full border-t border-t-white/25">
         <div className="wrap py-8 font-matiz lg:text-lg xl:text-xl flex max-lg:flex-col max-lg:items-center justify-between gap-2 lg:gap-8">
-          <p className="text-center">Website powered by Greenstone Entertainment.</p>
-          <p className="lg:ml-auto">Privacy Policy</p>
-          <p>Terms of use</p>
+          <p className="text-center">
+            Website powered by{" "}
+            <a className="underline hover:text-primary" href="https://www.apped.nz" target="_blank">
+              apped.nz
+            </a>
+          </p>
+          <div className="ml-auto lg:mr-20 ">
+            <Socials text="text-white" />
+          </div>
         </div>
       </div>
     </footer>

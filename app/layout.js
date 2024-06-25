@@ -4,7 +4,7 @@ import Header from "../components/UI/Header";
 import "./globals.css";
 
 export const metadata = {
-  title: "Timeles Festival",
+  title: "Timeless Festival",
   description:
     " Creating Timeless Live music and entertainment experiences that convert into forever  memories",
 };

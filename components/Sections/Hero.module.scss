@@ -1,8 +1,12 @@
+.section {
+  @apply py-10 pt-20 xl:pt-32 pb-12 relative  flex flex-col;
+  height: clamp(700px, 90dvh, 1100px);
+}
 .h1 {
   @apply font-back text-6xl uppercase text-pale-gray leading-none;
   font-size: clamp(24px, 6vw, 104px);
 }
 .p {
-  @apply font-matiz text-6xl uppercase text-primary leading-none;
-  font-size: clamp(18px, 5vw, 80px);
+  @apply font-back text-6xl uppercase text-pale-gray leading-none;
+  font-size: clamp(24px, 6vw, 104px);
 }

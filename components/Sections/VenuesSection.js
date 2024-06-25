@@ -3,7 +3,7 @@ import VenuesItem from "../VenuesItem";
 import styles from "./VenuesSection.module.scss";
 const venues = [
   {
-    img: "/venues/christchurch.webp",
+    img: "/venues/christchurch.jpeg",
     city: "Christchurch",
     text: (
       <>
@@ -18,7 +18,7 @@ const venues = [
     ),
   },
   {
-    img: "/venues/christchurch.webp",
+    img: "/venues/napier.jpeg",
     city: "Napier",
     text: (
       <>
@@ -36,7 +36,7 @@ const venues = [
     ),
   },
   {
-    img: "/venues/christchurch.webp",
+    img: "/venues/new-plymouth.jpeg",
     city: "New Plymouth",
     text: (
       <>
@@ -54,7 +54,7 @@ const venues = [
     ),
   },
   {
-    img: "/venues/christchurch.webp",
+    img: "/venues/tauranga.jpeg",
     city: "Tauranga",
     text: (
       <>
@@ -72,7 +72,7 @@ const venues = [
     ),
   },
   {
-    img: "/venues/christchurch.webp",
+    img: "/venues/auckland.jpeg",
     city: "Auckland",
     text: (
       <>
@@ -93,7 +93,7 @@ export default function VenuesSection() {
   return (
     <section className={`${styles.section}`}>
       <div className="wrap relative z-10 ">
-        <Heading addClasses="text-center">SUMMER CONCERT TOUR VENUES</Heading>
+        <Heading addClasses="text-center">Timeless Summer Tour</Heading>
         <div className={styles.venuesList}>
           {venues.map((venue, i) => (
             <VenuesItem key={venue.city} venue={venue} leftSide={i % 2 === 0} />
