@@ -26,7 +26,7 @@ export default function FreeHatSection() {
             </motion.div>
             <div
               className={
-                "w-1/2 lg:flex-1 max-lg:text-center gap-2 mb-2 flex flex-col max-w-[650px] mx-auto h-max"
+                "w-1/2 max-lg:w-2/3 lg:flex-1 max-lg:text-center gap-2 mb-2 flex flex-col max-w-[650px] mx-auto h-max"
               }>
               <p className={styles.freeHat}> Early Bird Special</p>
               <p className={styles.tickets}>
