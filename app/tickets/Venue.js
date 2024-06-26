@@ -62,6 +62,7 @@ const childVariants = {
 export default function Venue({ venue }) {
   const {
     title,
+    time,
     photo,
     gaInclusions,
     gaPrices,
@@ -106,7 +107,7 @@ export default function Venue({ venue }) {
           className={`text-2xl lg:text-4xl xl:text-6xl text-center font-matiz uppercase text-white absolute drop-shadow-md top-1/2 left-1/2 leading-none w-max`}>
           {title}
           <br />
-          10am - 12pm
+          {time}
         </motion.p>
       </motion.div>
       {tiers.map((tier, i) =>

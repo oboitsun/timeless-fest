@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Heading from "../../components/UI/Heading";
+import { SpotifyIcon, WebSiteIcon } from "../../components/UI/icons";
 import ArtistModal from "./ArtistModal";
 import { artists } from "./list";
 
@@ -26,9 +27,18 @@ export default function ArtistsPage() {
               />
             </div>
             <div className="flex flex-col max-lg:items-center text-black max-lg:text-center">
-              <div className="w-full flex items-center justify-between gap-2 lg:gap-4 items center pb-4 lg:pb-7">
-                <h3 className="font-matiz uppercase lg:text-2xl xl:text-3xl ">{artist.name}</h3>
-                <div className="flex-shrink-0 w-max flex gap-4"></div>
+              <div className="w-full flex items-center justify-between gap-2 lg:gap-4 items center pb-4 lg:pb-7 max-md:flex-wrap">
+                <h3 className="max-md:hidden font-matiz uppercase  text-2xl xl:text-3xl tracking-tight">
+                  {artist.name}
+                </h3>
+                <div className="flex-shrink-0 w-max flex gap-4 items-center md:ml-auto">
+                  <a target="_blank" href={artist.spotify}>
+                    <SpotifyIcon className="text-green-500 w-10 h-10" />
+                  </a>
+                  <a target="_blank" href={artist.website}>
+                    <WebSiteIcon className=" w-10 h-10" />
+                  </a>
+                </div>
                 <button
                   onClick={() => {
                     setPickedArtist(artist);

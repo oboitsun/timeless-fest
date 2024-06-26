@@ -5,6 +5,7 @@ const venues = [
   {
     img: "/venues/christchurch.jpeg",
     city: "Christchurch",
+    time: "1pm - 8:30pm",
     text: (
       <>
         <p>The first stop on the Timeless Summer Tour series is Christchurch!</p> <br />
@@ -20,6 +21,7 @@ const venues = [
   {
     img: "/venues/napier.jpeg",
     city: "Napier",
+    time: "1pm - 8pm",
     text: (
       <>
         <p>
@@ -38,6 +40,7 @@ const venues = [
   {
     img: "/venues/new-plymouth.jpeg",
     city: "New Plymouth",
+    time: "4pm - 10:30pm",
     text: (
       <>
         <p>
@@ -56,6 +59,8 @@ const venues = [
   {
     img: "/venues/tauranga.jpeg",
     city: "Tauranga",
+    time: "2pm - 9:30pm",
+
     text: (
       <>
         <p>
@@ -74,6 +79,7 @@ const venues = [
   {
     img: "/venues/auckland.jpeg",
     city: "Auckland",
+    time: "1pm - 8pm",
     text: (
       <>
         <p>

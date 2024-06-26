@@ -110,10 +110,8 @@ export default function Header() {
         </div>
         <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden">
           <Socials />
-          <Link
-            href="/"
-            className="bg-primary hover:bg-black uppercase py-4 px-6 text-xl  font-matiz flex w-max text-black hover:text-primary transition-all ">
-            Buy Tickets
+          <Link href="/" className={styles.buy}>
+            <span className="relative top-0.5">Buy Tickets</span>
           </Link>
         </div>
       </div>

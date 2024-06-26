@@ -54,7 +54,7 @@ export default function VenuesItem({ venue, leftSide }) {
         <motion.p variants={childVariants} className={`${styles.city}`}>
           {venue.city}
           <br />
-          10am - 12pm
+          {venue.time}
         </motion.p>
       </motion.div>
       <motion.div

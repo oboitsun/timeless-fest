@@ -2,6 +2,8 @@ export const artists = [
   {
     src: "/artists/boy-george.png",
     name: "Boy George  of  Culture Club performing all his greatest hits",
+    website: "https://boygeorgeandcultureclub.net",
+    spotify: "https://open.spotify.com/artist/2BWfZGPtsjRlRp7JTDqI45?si=RZlq2FECRDGQqg7UICRYpQ",
     about: (
       <>
         <p>
@@ -64,6 +66,8 @@ export const artists = [
   {
     src: "/artists/little-river-band.png",
     name: "Little River Band  Celebrating their  50 Year Anniversary",
+    website: "https://reallittleriverband.com",
+    spotify: "https://open.spotify.com/artist/6clbbhnIqpHnqxwtOWcilg?si=MTWE6_7WTC24JwkDwYWdyg",
     about: (
       <>
         <p>
@@ -212,6 +216,8 @@ export const artists = [
   {
     src: "/artists/bonnie-tyler.png",
     name: "Bonnie Tyler, Summer Hits",
+    website: "https://bonnietyler.com",
+    spotify: "https://open.spotify.com/artist/0SD4eZCN4Kr0wQk56hCdh2?si=L91LWa5JSjWan73QQfdyLA",
     about: (
       <p>
         Bonnie Tyler, born Gaynor Hopkins, was brought up in Skewen, a small village near Swansea.
@@ -255,6 +261,8 @@ export const artists = [
   {
     src: "/artists/starship.png",
     name: "Starship, Featuring Mickey Thomas",
+    website: "https://www.starshipcontrol.com",
+    spotify: "https://open.spotify.com/artist/0kObWap02DEg9EAJ3PBxzf?si=cG9o1QLrQsCVGDZl4RgEzg",
     about: (
       <>
         <p>

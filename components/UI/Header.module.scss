@@ -12,6 +12,9 @@
       background: black;
     }
   }
+  .buy {
+    @apply bg-primary hover:bg-black uppercase py-4 px-6 text-xl  font-matiz flex w-max text-black hover:text-primary transition-all;
+  }
   &.fixed {
     @apply border-b-transparent bg-transparent;
 
@@ -19,6 +22,9 @@
     top: 0;
     left: 0;
     z-index: 20;
+    .buy {
+      @apply bg-pale-gray;
+    }
     .link {
       @apply text-black;
     }
@@ -30,7 +36,9 @@
   }
   &.fixed.scrolled {
     @apply bg-pale-gray py-2 lg:py-3  border-b-black/25;
-
+    .buy {
+      @apply bg-black text-white hover:text-primary;
+    }
     .link {
       @apply text-black;
     }
