@@ -79,21 +79,24 @@ img {
 }
 
 @media (min-width:1024px) {
+  .button-lines {
+    @apply relative;
+  }
 
-  .promo-btn::after,
-  .promo-btn::before {
+  .button-lines::after,
+  .button-lines::before {
     z-index: 2;
     content: '';
     @apply absolute top-1/2 bg-primary/90 h-px;
     width: clamp(40px, 15vw, 240px);
   }
 
-  .promo-btn::after {
+  .button-lines::after {
     left: calc(100% + clamp(10px, 4vw, 40px));
     transform: translate(0, -50%);
   }
 
-  .promo-btn::before {
+  .button-lines::before {
     right: calc(100% + clamp(10px, 4vw, 40px));
     transform: translate(0, -50%);
   }

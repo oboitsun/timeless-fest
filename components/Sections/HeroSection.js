@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import PromoModal from "../PromoModal";
+import { SpotifyIcon } from "../UI/icons";
 import styles from "./Hero.module.scss";
 const artists = [
   { src: "/artists/boy-george.png", name: "Boy George" },
@@ -46,20 +47,33 @@ export default function HeroSection() {
         alt="texture"
       />
       <div className="wrap flex flex-col items-center justify-center h-1/2 flex-grow relative  ">
-        <motion.p
-          initial={{ opacity: 0, y: "15%" }}
-          transition={{ delay: 0.3 }}
-          animate={{ opacity: 1, y: "0%" }}
-          className={styles.p}>
-          2025 timeless
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: "15%" }}
-          transition={{ delay: 0.5 }}
-          animate={{ opacity: 1, y: "0%" }}
-          className={styles.h1}>
-          Summer Tour
-        </motion.h1>
+        <div className="flex max-md:flex-col items-center w-full gap-4 justify-center">
+          <div className="">
+            <motion.p
+              initial={{ opacity: 0, y: "15%" }}
+              transition={{ delay: 0.3 }}
+              animate={{ opacity: 1, y: "0%" }}
+              className={styles.p}>
+              2025 timeless
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: "15%" }}
+              transition={{ delay: 0.5 }}
+              animate={{ opacity: 1, y: "0%" }}
+              className={styles.h1}>
+              Summer Tour
+            </motion.h1>
+          </div>
+          <div className="w-max">
+            <Image
+              className="w-auto h-full"
+              width={524}
+              height={259}
+              src={"/dates.png"}
+              alt="dates"
+            />
+          </div>
+        </div>
         <motion.div
           variants={parentVariants}
           initial="hidden"
@@ -81,8 +95,15 @@ export default function HeroSection() {
             </motion.div>
           ))}
         </motion.div>
-        <div className="mt-5 lg:mt-10">
+        <div className="mt-5 lg:mt-10 flex max-lg:flex-col  lg:gap-6 button-lines">
           <PromoModal />
+          <a
+            target="_blank"
+            href="https://open.spotify.com/playlist/21dcPTCRigIqbu7XfEHQIV?si=15db3ffdc43b4cad"
+            className="promo-btn">
+            <span className="relative translate-y-0.5"> See Our Promo Video</span>
+            <SpotifyIcon className="text-green-400 lg:w-10 w-6" />
+          </a>
         </div>
       </div>
     </section>
