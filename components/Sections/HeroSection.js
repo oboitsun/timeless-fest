@@ -47,8 +47,8 @@ export default function HeroSection() {
         alt="texture"
       />
       <div className="wrap flex flex-col items-center justify-center h-1/2 flex-grow relative  ">
-        <div className="flex max-md:flex-col items-center w-full gap-4 justify-center">
-          <div className="">
+        <div className="flex max-md:flex-col max-lg:items-center w-full gap-4 justify-center">
+          <div className="flex flex-col items-center justify-center">
             <motion.p
               initial={{ opacity: 0, y: "15%" }}
               transition={{ delay: 0.3 }}
@@ -64,15 +64,19 @@ export default function HeroSection() {
               Summer Tour
             </motion.h1>
           </div>
-          <div className="w-max">
+          <motion.div
+            initial={{ opacity: 0, y: "15%" }}
+            transition={{ delay: 0.7 }}
+            animate={{ opacity: 1, y: "0%" }}
+            className="w-full md:w-1/2 lg:w-1/3 h-auto flex flex-col">
             <Image
-              className="w-auto h-full"
+              className="w-full h-1/2 flex-grow  object-contain"
               width={524}
               height={259}
               src={"/dates.png"}
               alt="dates"
             />
-          </div>
+          </motion.div>
         </div>
         <motion.div
           variants={parentVariants}

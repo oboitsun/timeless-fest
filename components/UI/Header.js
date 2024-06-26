@@ -77,7 +77,7 @@ export default function Header() {
           onClick={() => {
             setOpen(!open);
           }}
-          className={`${styles.burger} ${open ? styles["is-open"] : ""} lg:hidden relative z-30`}>
+          className={`${styles.burger} ${open ? styles["is-open"] : ""} xl:hidden relative z-30`}>
           <div className={styles["line-top"]}></div>
           <div className={styles["line-middle"]}></div>
           <div className={styles["line-bottom"]}></div>
