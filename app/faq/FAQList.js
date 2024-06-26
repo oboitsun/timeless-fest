@@ -28,6 +28,7 @@ export default function FAQList({ list }) {
     }
     setOpenId(0);
   };
+
   return (
     <motion.div
       key="faq"
@@ -37,7 +38,7 @@ export default function FAQList({ list }) {
       className="w-full flex flex-col lg:h-full lg:flex-grow py-2 ">
       {list &&
         list
-          ?.sort((a, b) => a.sys.id - b.sys.id)
+          ?.sort((a, b) => a.fields.order - b.fields.order)
           .map(({ fields, sys }) => {
             return (
               <FaqItem

@@ -3,7 +3,9 @@ import { useState } from "react";
 import Venue from "./Venue";
 
 export default function VenuesTabs({ venues }) {
-  const [currentTab, setCurrentTab] = useState(venues[0]?.fields.slug);
+  const [currentTab, setCurrentTab] = useState(
+    venues.sort((a, b) => a?.fields?.order - b?.fields?.order)?.[0]?.fields.slug
+  );
 
   return (
     <div className="relative flex max-lg:flex-col w-full 2xl:gap-10 gap-5 ">

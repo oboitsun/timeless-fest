@@ -105,7 +105,7 @@ export default function HeroSection() {
             target="_blank"
             href="https://open.spotify.com/playlist/21dcPTCRigIqbu7XfEHQIV?si=15db3ffdc43b4cad"
             className="promo-btn">
-            <span className="relative translate-y-0.5"> See Our Promo Video</span>
+            <span className="relative translate-y-0.5"> Official Spotify Playlist</span>
             <SpotifyIcon className="text-green-400 lg:w-10 w-6" />
           </a>
         </div>
