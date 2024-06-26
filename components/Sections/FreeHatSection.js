@@ -33,9 +33,11 @@ export default function FreeHatSection() {
                 Tickets purchased between July 3-5 come with a free Timeless Summer Tour hat!
               </p>
             </div>
-            <button className={styles.buy}>
-              <span>buy Tickets</span>
-            </button>
+            <a
+              href="https://arep.co/p/timeless-summer-tour-register-for-pre-sales-1"
+              className={styles.buy}>
+              <span>Pre-registration</span>
+            </a>
           </div>
           <Image fill src="/frame.png" alt="Frame" className="object-cover" />
         </div>
