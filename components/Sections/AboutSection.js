@@ -7,7 +7,7 @@ export default function AboutSection() {
     <section className="bg-orange py-10 lg:py-20 xl:py-40 text-black ">
       <div className="wrap flex max-lg:flex-col gap-5 lg:gap-10 2xl:gap-20">
         <div className="flex-1 w-full">
-          <Heading>About Summer Concert Tour</Heading>
+          <Heading>ABOUT TIMELESS SUMMER TOUR</Heading>
           <p className="pt-4 font-semibold xl:text-xl  xl:leading-relaxed">
             Timeless Live is proud to present Timeless Summer Tour –  a new summer concert series
             celebrating legendary musicians from around the world. 

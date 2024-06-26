@@ -37,15 +37,17 @@ export default function PromoModal() {
             className="absolute z-10 right-0 top-0 h-10 w-10 bg-pale-gray p-2 text-black font-bold">
             x
           </button>
-          <iframe
-            className="object-cover absolute top-0 left-0 "
-            width="100%"
-            height="100%"
-            frameBorder={0}
-            src="https://www.youtube.com/embed/H_ORu9ubzy8?si=h9kMIvKy1bR-i9Ri?mute=0&autoplay=0&controls=1&loop=1"
-            title="YouTube video player"
-            allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen></iframe>
+          {show && (
+            <iframe
+              className="object-cover absolute top-0 left-0 "
+              width="100%"
+              height="100%"
+              frameBorder={0}
+              src="https://www.youtube.com/embed/H_ORu9ubzy8?si=h9kMIvKy1bR-i9Ri?mute=0&autoplay=0&controls=1&loop=1"
+              title="YouTube video player"
+              allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen></iframe>
+          )}
         </div>
       </div>
     </>

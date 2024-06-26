@@ -37,18 +37,20 @@ export default function FAQList({ list }) {
       className="w-full flex flex-col lg:h-full lg:flex-grow py-2 ">
       {list &&
         list
-          ?.sort((a, b) => a.fields.id - b.fields.id)
-          .map(({ fields }) => (
-            <FaqItem
-              key={fields.id}
-              question={fields.heading}
-              handleOpen={() => {
-                handleOpen(fields.id);
-              }}
-              open={openId === fields.id}>
-              {documentToReactComponents(fields.answer, options)}
-            </FaqItem>
-          ))}
+          ?.sort((a, b) => a.sys.id - b.sys.id)
+          .map(({ fields, sys }) => {
+            return (
+              <FaqItem
+                key={sys.id}
+                question={fields.heading}
+                handleOpen={() => {
+                  handleOpen(sys.id);
+                }}
+                open={openId === sys.id}>
+                {documentToReactComponents(fields.answer, options)}
+              </FaqItem>
+            );
+          })}
     </motion.div>
   );
 }

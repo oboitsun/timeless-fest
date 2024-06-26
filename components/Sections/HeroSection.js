@@ -58,7 +58,7 @@ export default function HeroSection() {
           transition={{ delay: 0.5 }}
           animate={{ opacity: 1, y: "0%" }}
           className={styles.h1}>
-          Summer Concert Tour
+          Summer Tour
         </motion.h1>
         <motion.div
           variants={parentVariants}

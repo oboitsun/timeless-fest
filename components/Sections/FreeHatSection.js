@@ -30,7 +30,7 @@ export default function FreeHatSection() {
               }>
               <p className={styles.freeHat}> Early Bird Special</p>
               <p className={styles.tickets}>
-                Tickets purchased between July 3-5 come with a free Ttimeless Summer Tour hat!
+                Tickets purchased between July 3-5 come with a free Timeless Summer Tour hat!
               </p>
             </div>
             <button className={styles.buy}>
