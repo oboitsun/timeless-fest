@@ -72,9 +72,9 @@ img {
 }
 
 .promo-btn {
-  @apply bg-pale-gray font-matiz uppercase flex items-center gap-2 text-black leading-none relative max-xl:mt-10;
-  font-size: 1.5rem;
-  padding: 20px 30px;
+  @apply bg-pale-gray font-matiz uppercase flex items-center gap-2 text-black text-sm lg:text-lg leading-none relative max-xl:mt-5 px-5 py-2 lg:px-8 lg:py-5;
+
+
   transition: all 0.4s;
 }
 

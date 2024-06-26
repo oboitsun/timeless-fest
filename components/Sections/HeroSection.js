@@ -81,7 +81,7 @@ export default function HeroSection() {
             </motion.div>
           ))}
         </motion.div>
-        <div className=" mt-10">
+        <div className="mt-5 lg:mt-10">
           <PromoModal />
         </div>
       </div>

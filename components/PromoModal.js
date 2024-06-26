@@ -11,7 +11,7 @@ export default function PromoModal() {
         onClick={() => {
           setShow(true);
         }}>
-        <span className="relative translate-y-0.5"> See Our Promo</span>
+        <span className="relative translate-y-0.5"> See Our Promo Video</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
