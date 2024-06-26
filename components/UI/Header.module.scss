@@ -12,6 +12,9 @@
       background: black;
     }
   }
+  svg {
+    @apply text-black;
+  }
   .buy {
     @apply bg-primary hover:bg-black uppercase py-4 px-6 text-xl  font-matiz flex w-max text-black hover:text-primary transition-all;
   }
@@ -22,6 +25,9 @@
     top: 0;
     left: 0;
     z-index: 20;
+    svg {
+      @apply text-white;
+    }
     .buy {
       @apply bg-pale-gray;
     }
@@ -36,6 +42,9 @@
   }
   &.fixed.scrolled {
     @apply bg-pale-gray py-2 lg:py-3  border-b-black/25;
+    svg {
+      @apply text-black;
+    }
     .buy {
       @apply bg-black text-white hover:text-primary;
     }

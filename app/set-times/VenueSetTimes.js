@@ -60,8 +60,8 @@ const childVariants = {
   }),
 };
 export default function VenueSetTimes({ venue }) {
-  const { title, time, photo, setTimes } = venue?.fields || {};
-
+  const { title, photo, setTimes } = venue?.fields || {};
+  const [date, time] = venue?.fields?.time?.split(";");
   return (
     <div className="w-full flex flex-col gap-5 xl:gap-10">
       <motion.div
@@ -79,6 +79,8 @@ export default function VenueSetTimes({ venue }) {
           variants={childVariants}
           className={`text-2xl lg:text-4xl xl:text-6xl text-center font-matiz uppercase text-white absolute drop-shadow-md top-1/2 left-1/2 leading-none w-max`}>
           {title}
+          <br />
+          {date}
           <br />
           {time}
         </motion.p>

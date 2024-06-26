@@ -63,7 +63,9 @@ export default async function Tab({ params }) {
         <div className="grid lg:grid-cols-[1fr,max-content] gap-2 lg:gap-4 text-black">
           <p className="opacity-50">{format(new Date(createdAt), "dd MMM yyyy")}</p>
         </div>
-        <div className={"text-black mt-5 lg:text-xl"}>{documentToReactComponents(art)}</div>
+        <div className={"text-black mt-5 lg:text-xl flex flex-col gap-2 lg:gap-4"}>
+          {documentToReactComponents(art)}
+        </div>
       </div>
     </section>
   );

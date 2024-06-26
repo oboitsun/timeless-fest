@@ -1,109 +1,32 @@
+import { createClient } from "contentful";
 import Heading from "../UI/Heading";
 import VenuesItem from "../VenuesItem";
 import styles from "./VenuesSection.module.scss";
-const venues = [
-  {
-    img: "/venues/christchurch.jpeg",
-    city: "Christchurch",
-    time: "1pm - 8:30pm",
-    text: (
-      <>
-        <p>The first stop on the Timeless Summer Tour series is Christchurch!</p> <br />
-        <p>
-          Located in the heart of the South Island, Christchurch is home to a diverse natural
-          environment with plenty to offer. With wide open spaces, modern architecture, heritage
-          buildings and a revitalised city centre, Christchurch is a city where people can
-          experience energy and tranquillity in the same visit.
-        </p>
-      </>
-    ),
-  },
-  {
-    img: "/venues/napier.jpeg",
-    city: "Napier",
-    time: "1pm - 8pm",
-    text: (
-      <>
-        <p>
-          Stop two is Napier&apos;s Church Road Winery, providing the ultimate backdrop for the
-          Timeless Summer Tour concert. 
-        </p>{" "}
-        <br />
-        <p>
-          Famous for its beautifully lined streets of Art Deco buildings and home to fine wineries,
-          quality eateries, family friendly activities and a scenic marine parade, Napier is a
-          stunning place to live, visit and explore.
-        </p>
-      </>
-    ),
-  },
-  {
-    img: "/venues/new-plymouth.jpeg",
-    city: "New Plymouth",
-    time: "4pm - 10:30pm",
-    text: (
-      <>
-        <p>
-          Next up is the Bowl of Brooklands – a world-class natural amphitheatre in the vibrant city
-          of New Plymouth. 
-        </p>{" "}
-        <br />
-        <p>
-          With picturesque parks and gardens, stunning hiking spots and walks, art galleries,
-          family-friendly fun and a sunny climate, there is plenty to do, see and enjoy in New
-          Plymouth.
-        </p>
-      </>
-    ),
-  },
-  {
-    img: "/venues/tauranga.jpeg",
-    city: "Tauranga",
-    time: "2pm - 9:30pm",
 
-    text: (
-      <>
-        <p>
-          Home to New Zealand&apos;s Best Beach, Mount Maunganui is the fourth stop on the Timeless
-          Summer Tour series. 
-        </p>{" "}
-        <br />
-        <p>
-          Take a walk up to the iconic peak of Mauao, stroll the white sand along Main Beach, take a
-          dip in the relaxing waters of Pilot Bay or enjoy a coffee at one of the many nearby cafes
-          and restaurants. The Mount is a relaxed beach town where people love to live and play.
-        </p>
-      </>
-    ),
-  },
-  {
-    img: "/venues/auckland.jpeg",
-    city: "Auckland",
-    time: "1pm - 8pm",
-    text: (
-      <>
-        <p>
-          We end New Zealand&apos;s Timeless Summer Tour in Aotearoa&apos;s biggest city, Auckland.
-        </p>
-        <br />
-        <p>
-          Auckland is a multi-cultural destination that provides a plethora of entertainment
-          opportunities. From native forests and natural resources to food, music and culture
-          Auckland combines varied experiences for all to enjoy.
-        </p>
-      </>
-    ),
-  },
-];
-export default function VenuesSection() {
+const client = createClient({
+  space: process.env.NEXT_APP_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_APP_CONTENTFUL_API_TOKEN,
+});
+export async function getVenues() {
+  const res = await client.getEntries({ content_type: "venues" });
+
+  if (!res) {
+    return {};
+  }
+  return res.items ?? [];
+}
+export default async function VenuesSection() {
+  const venuesRes = await getVenues();
   return (
     <section className={`${styles.section}`}>
       <div className="wrap relative z-10 ">
         <Heading addClasses="text-center">Timeless Summer Tour</Heading>
         <div className={styles.venuesList}>
-          {venues.map((venue, i) => (
-            <VenuesItem key={venue.city} venue={venue} leftSide={i % 2 === 0} />
-          ))}
+          {venuesRes
+            .sort((a, b) => a?.fields?.order - b?.fields?.order)
+            .map((venue, i) => (
+              <VenuesItem key={venue.fields?.slug} venue={venue} leftSide={i % 2 === 0} />
+            ))}
         </div>
       </div>
     </section>

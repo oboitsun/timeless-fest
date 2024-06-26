@@ -43,7 +43,7 @@ export default function PromoModal() {
               width="100%"
               height="100%"
               frameBorder={0}
-              src="https://youtu.be/SdXsCvmCIvw?si=hfuREnWXZ_Ra5K2q?mute=0&autoplay=0&controls=1&loop=1"
+              src="https://www.youtube.com/embed/SdXsCvmCIvw?si=GVJERKsz70gRbxh2"
               title="YouTube video player"
               allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen></iframe>

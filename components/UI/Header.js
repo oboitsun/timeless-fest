@@ -109,7 +109,7 @@ export default function Header() {
           </div>
         </div>
         <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden">
-          <Socials />
+          <Socials text={`text-inherit`} />
           <Link
             href="https://arep.co/p/timeless-summer-tour-register-for-pre-sales-1"
             className={styles.buy}>
