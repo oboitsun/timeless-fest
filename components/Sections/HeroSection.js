@@ -64,7 +64,7 @@ export default function HeroSection() {
           variants={parentVariants}
           initial="hidden"
           animate="show"
-          className="w-10/12 grid grid-cols-2 lg:grid-cols-4 pt-5 xl:pt-10">
+          className="w-full md:w-10/12 max-md:gap-2 grid grid-cols-2 lg:grid-cols-4 pt-5 xl:pt-10">
           {artists.map(({ src, name }, i) => (
             <motion.div
               variants={childVariants}
