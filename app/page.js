@@ -1,7 +1,12 @@
-import AboutSection from "../components/Sections/AboutSection";
-import FreeHatSection from "../components/Sections/FreeHatSection";
+import dynamic from "next/dynamic";
 import HeroSection from "../components/Sections/HeroSection";
-import VenuesSection from "../components/Sections/VenuesSection";
+
+const AboutSection = dynamic(() => import("../components/Sections/AboutSection"), { ssr: false });
+const FreeHatSection = dynamic(() => import("../components/Sections/FreeHatSection"), {
+  ssr: false,
+});
+
+const VenuesSection = dynamic(() => import("../components/Sections/VenuesSection"), { ssr: false });
 
 export default function HomePage() {
   return (
