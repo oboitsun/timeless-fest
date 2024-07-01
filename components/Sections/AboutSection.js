@@ -26,6 +26,7 @@ export default function AboutSection() {
             memories!
           </p>
           <Link
+            prefetch={false}
             href="/about"
             className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
             read more

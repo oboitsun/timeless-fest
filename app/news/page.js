@@ -57,6 +57,7 @@ export default async function page() {
                 <p className="opacity-50">{format(new Date(createdAt), "dd MMM yyyy")}</p>
                 <h4 className="lg:order-1 font-matiz text-lg lg:text-3xl">{title}</h4>
                 <Link
+                  prefetch={false}
                   href={`/news/${slug}`}
                   className="bg-primary py-5 px-8  leading-none font-matiz uppercase text-black lg:row-span-2 lg:col-start-2 flex justify-center items-center ">
                   <span className="relative translate-y-[16%]">read more</span>

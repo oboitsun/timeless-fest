@@ -59,12 +59,16 @@ export default function Header() {
         scrolled || open ? styles.scrolled : ""
       } overflow-x-hidden`}>
       <div className="wrap flex justify-between items-center gap-10 w-full">
-        <Link href="/" className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10">
+        <Link
+          prefetch={false}
+          href="/"
+          className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10">
           <Image className="w-full " quality="100" width={161} height={99} src={"/logo.png"} />
         </Link>
         <div className="w-10/12 flex flex-grow  justify-around gap-2  max-xl:hidden">
           {links.map((l) => (
             <Link
+              prefetch={false}
               key={l.href}
               href={l.href}
               className={`${styles.link} min-w-max  ${location === l.href ? styles.active : ""}`}>
@@ -89,6 +93,7 @@ export default function Header() {
           <div className="xl:hidden flex flex-col gap-8 text-black">
             {links.map((l) => (
               <Link
+                prefetch={false}
                 onClick={() => {
                   setOpen(false);
                 }}
@@ -101,6 +106,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end gap-4 items-center">
             <Link
+              prefetch={false}
               href="/"
               className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
               Buy Tickets
@@ -111,6 +117,7 @@ export default function Header() {
         <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden">
           <Socials text={`text-inherit`} />
           <Link
+            prefetch={false}
             href="https://arep.co/p/timeless-summer-tour-register-for-pre-sales-1"
             className={styles.buy}>
             <span className="relative top-0.5">Pre-register</span>

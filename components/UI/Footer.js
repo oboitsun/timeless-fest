@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="wrap  py-8 lg:py-16 flex max-xl:flex-wrap gap-5 max-lg:flex-col justify-between items-center">
-        <Link href={"/"}>
+        <Link prefetch={false} href={"/"}>
           <Image
             className="w-[10vh] max-w-max flex-shrink-0 mr-10"
             quality="100"
@@ -48,7 +48,7 @@ export default function Footer() {
         </Link>
         <div className={styles.links}>
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="hover:text-primary">
+            <Link prefetch={false} key={l.href} href={l.href} className="hover:text-primary">
               {l.label}
             </Link>
           ))}
