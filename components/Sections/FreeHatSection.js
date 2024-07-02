@@ -1,11 +1,16 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 import styles from "./FreeHat.module.scss";
 export default function FreeHatSection() {
   const ref = useRef();
   const inView = useInView(ref, { amount: "some", once: true });
+  const openBuyModal = useCallback(() => {
+    const event = new CustomEvent("showBuyModal");
+
+    document.dispatchEvent(event);
+  }, []);
   return (
     <div className="bg-orange   w-full">
       <motion.div
@@ -33,11 +38,13 @@ export default function FreeHatSection() {
                 Tickets purchased between July 3-5 come with a free Timeless Summer Tour hat!
               </p>
             </div>
-            <a
-              href="https://arep.co/p/timeless-summer-tour-register-for-pre-sales-1"
+            <button
+              onClick={() => {
+                openBuyModal();
+              }}
               className={styles.buy}>
-              <span>Pre-registration</span>
-            </a>
+              <span>Buy Tickets</span>
+            </button>
           </div>
           <Image fill src="/frame.png" alt="Frame" className="object-cover" />
         </div>

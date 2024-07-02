@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import TicketsModal from "../TicketsModal";
 import styles from "./Header.module.scss";
 import Socials from "./Socials";
 export const links = [
@@ -53,6 +54,12 @@ export default function Header() {
       document.removeEventListener("scroll", () => {});
     };
   }, []);
+  const openBuyModal = useCallback((e) => {
+    e.preventDefault(); // Prevent default action if needed
+    const event = new CustomEvent("showBuyModal");
+
+    document.dispatchEvent(event);
+  }, []);
   return (
     <nav
       className={`${styles.nav} ${isHome ? styles.fixed : ""} ${
@@ -63,7 +70,14 @@ export default function Header() {
           prefetch={false}
           href="/"
           className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10">
-          <Image className="w-full " quality="100" width={161} height={99} src={"/logo.png"} />
+          <Image
+            className="w-full "
+            quality="100"
+            width={161}
+            height={99}
+            src={"/logo.png"}
+            alt="Logo"
+          />
         </Link>
         <div className="w-10/12 flex flex-grow  justify-around gap-2  max-xl:hidden">
           {links.map((l) => (
@@ -105,25 +119,22 @@ export default function Header() {
             ))}
           </div>
           <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end gap-4 items-center">
-            <Link
-              prefetch={false}
-              href="/"
+            <button
+              onClick={(e) => openBuyModal(e)}
               className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
               Buy Tickets
-            </Link>
+            </button>
             <Socials />
           </div>
         </div>
         <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden">
           <Socials text={`text-inherit`} />
-          <Link
-            prefetch={false}
-            href="https://arep.co/p/timeless-summer-tour-register-for-pre-sales-1"
-            className={styles.buy}>
-            <span className="relative top-0.5">Pre-register</span>
-          </Link>
+          <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
+            <span className="relative top-0.5">buy tickets</span>
+          </button>
         </div>
       </div>
+      <TicketsModal />
     </nav>
   );
 }
