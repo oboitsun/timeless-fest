@@ -61,80 +61,84 @@ export default function Header() {
     document.dispatchEvent(event);
   }, []);
   return (
-    <nav
-      className={`${styles.nav} ${isHome ? styles.fixed : ""} ${
-        scrolled || open ? styles.scrolled : ""
-      } overflow-x-hidden`}>
-      <div className="wrap flex justify-between items-center gap-10 w-full">
-        <Link
-          prefetch={false}
-          href="/"
-          className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10">
-          <Image
-            className="w-full "
-            quality="100"
-            width={161}
-            height={99}
-            src={"/logo.png"}
-            alt="Logo"
-          />
-        </Link>
-        <div className="w-10/12 flex flex-grow  justify-around gap-2  max-xl:hidden">
-          {links.map((l) => (
-            <Link
-              prefetch={false}
-              key={l.href}
-              href={l.href}
-              className={`${styles.link} min-w-max  ${location === l.href ? styles.active : ""}`}>
-              {l.label}
-            </Link>
-          ))}
-        </div>
-
-        <button
-          onClick={() => {
-            setOpen(!open);
-          }}
-          className={`${styles.burger} ${open ? styles["is-open"] : ""} xl:hidden relative z-30`}>
-          <div className={styles["line-top"]}></div>
-          <div className={styles["line-middle"]}></div>
-          <div className={styles["line-bottom"]}></div>
-        </button>
-        <div
-          className={`xl:w-1/2 flex-shrink xl:static fixed top-0 right-0 w-4/5 max-xl:flex-col  max-xl:bg-pale-gray max-xl:h-svh max-xl:pt-14 max-xl:px-8 xl:hidden transition-all ${
-            open ? "max-xl:translate-x-0" : "max-xl:translate-x-full"
-          }`}>
-          <div className="xl:hidden flex flex-col gap-8 text-black">
+    <>
+      <nav
+        className={`${styles.nav} ${isHome ? styles.fixed : ""} ${
+          scrolled || open ? styles.scrolled : ""
+        } overflow-x-hidden`}>
+        <div className="wrap flex justify-between items-center gap-10 w-full">
+          <Link
+            prefetch={false}
+            href="/"
+            className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10">
+            <Image
+              className="w-full "
+              quality="100"
+              width={161}
+              height={99}
+              src={"/logo.png"}
+              alt="Logo"
+            />
+          </Link>
+          <div className="w-10/12 flex flex-grow  justify-around gap-2  max-xl:hidden">
             {links.map((l) => (
               <Link
                 prefetch={false}
-                onClick={() => {
-                  setOpen(false);
-                }}
                 key={l.href}
                 href={l.href}
-                className={`${styles.link} ${location === l.href ? styles.active : "text-black"}`}>
+                className={`${styles.link} min-w-max  ${location === l.href ? styles.active : ""}`}>
                 {l.label}
               </Link>
             ))}
           </div>
-          <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end gap-4 items-center">
-            <button
-              onClick={(e) => openBuyModal(e)}
-              className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
-              Buy Tickets
+
+          <button
+            onClick={() => {
+              setOpen(!open);
+            }}
+            className={`${styles.burger} ${open ? styles["is-open"] : ""} xl:hidden relative z-30`}>
+            <div className={styles["line-top"]}></div>
+            <div className={styles["line-middle"]}></div>
+            <div className={styles["line-bottom"]}></div>
+          </button>
+          <div
+            className={`xl:w-1/2 flex-shrink xl:static fixed top-0 right-0 w-4/5 max-xl:flex-col  max-xl:bg-pale-gray max-xl:h-svh max-xl:pt-14 max-xl:px-8 xl:hidden transition-all ${
+              open ? "max-xl:translate-x-0" : "max-xl:translate-x-full"
+            }`}>
+            <div className="xl:hidden flex flex-col gap-8 text-black">
+              {links.map((l) => (
+                <Link
+                  prefetch={false}
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                  key={l.href}
+                  href={l.href}
+                  className={`${styles.link} ${
+                    location === l.href ? styles.active : "text-black"
+                  }`}>
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end gap-4 items-center">
+              <button
+                onClick={(e) => openBuyModal(e)}
+                className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
+                Buy Tickets
+              </button>
+              <Socials />
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden">
+            <Socials text={`text-inherit`} />
+            <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
+              <span className="relative top-0.5">buy tickets</span>
             </button>
-            <Socials />
           </div>
         </div>
-        <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden">
-          <Socials text={`text-inherit`} />
-          <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
-            <span className="relative top-0.5">buy tickets</span>
-          </button>
-        </div>
-      </div>
+      </nav>
       <TicketsModal />
-    </nav>
+    </>
   );
 }
