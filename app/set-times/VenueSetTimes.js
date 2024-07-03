@@ -106,6 +106,7 @@ export default function VenueSetTimes({ venue }) {
           <p className="text-7xl font-matiz uppercase text-center mx-auto pt-5"> TBA</p>
         )}
       </motion.div>
+      <p className="text-lg uppercase">* times subject to change</p>
     </div>
   );
 }
