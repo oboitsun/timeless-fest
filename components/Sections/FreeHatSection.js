@@ -27,16 +27,19 @@ export default function FreeHatSection() {
               whileHover={{ rotate: "-8deg", y: -5, x: -5, transformOrigin: "0% 100%" }}
               whileTap={{ rotate: "-8deg", y: -5, x: -5, transformOrigin: "0% 100%" }}
               className={styles.hat}>
-              <Image width={180} height={180} src="/hat.png" alt="Free Hat" className="w-full" />
+              <Image
+                width={255}
+                height={120}
+                src="/afterpay.png"
+                alt="AfterPay"
+                className="w-full"
+              />
             </motion.div>
             <div
               className={
-                "w-1/2 max-lg:w-2/3 lg:flex-1 max-lg:text-center gap-2 mb-2 flex flex-col max-w-[650px] mx-auto h-max"
+                "w-1/2 max-lg:w-2/3 lg:flex-1  max-lg:text-center gap-2 mb-2 flex flex-grow max-w-[650px] mx-auto h-max"
               }>
-              <p className={styles.freeHat}> Early Bird Special</p>
-              <p className={styles.tickets}>
-                Tickets purchased between July 3-5 come with a free Timeless Summer Tour hat!
-              </p>
+              <p className={styles.freeHat}> afterpay Payment Option available</p>
             </div>
             <button
               onClick={() => {
