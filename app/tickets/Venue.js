@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import FreeHatSection from "../../components/Sections/FreeHatSection";
 const venues = {
   Christchurch: "/venues/christchurch.jpeg",
   Napier: "/venues/napier.jpeg",
@@ -145,6 +146,7 @@ export default function Venue({ venue }) {
           <></>
         )
       )}
+      <FreeHatSection type="small" />
     </div>
   );
 }

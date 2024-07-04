@@ -28,6 +28,12 @@
       transform: translateY(16%);
     }
   }
+  &.small {
+    .freeHat {
+      @apply text-center;
+      font-size: clamp(18px, 3vw, 48px);
+    }
+  }
   @media (min-width: 1024px) {
     .hat {
       width: 17.5%;

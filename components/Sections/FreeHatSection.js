@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useRef } from "react";
 import styles from "./FreeHat.module.scss";
-export default function FreeHatSection() {
+export default function FreeHatSection({ type = "big" }) {
   const ref = useRef();
   const inView = useInView(ref, { amount: "some", once: true });
   const openBuyModal = useCallback(() => {
@@ -12,7 +12,7 @@ export default function FreeHatSection() {
     document.dispatchEvent(event);
   }, []);
   return (
-    <div className="bg-orange   w-full">
+    <div className={`${type === "big" ? "bg-orange" : ""} w-full`}>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: "100%" }}
@@ -21,7 +21,7 @@ export default function FreeHatSection() {
         style={{ maxWidth: "calc(1470px + 80px)" }}
         className="w-full relative flex justify-center  lg:px-10  mx-auto">
         <div className="w-full relative pb-[50%] lg:pb-[22%] overflow-x-hidden">
-          <div className={styles.inner}>
+          <div className={`${styles.inner} ${type === "small" ? styles.small : ""}`}>
             <motion.div
               initial={{ transformOrigin: "0% 100%" }}
               whileHover={{ rotate: "-8deg", y: -5, x: -5, transformOrigin: "0% 100%" }}
