@@ -1,27 +1,27 @@
 "use client";
 
-import { XMarkIcon } from "@heroicons/react/24/solid";
+import { ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 const ticket_links = [
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-christchurch-11jan2025",
-    city: "chch 11",
+    city: "Christchurch - 11",
   },
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-napier",
-    city: "napier 12",
+    city: "napier - 12",
   },
   {
     link: "https://premier.ticketek.co.nz/shows/show.aspx?sh=TIMELESS25",
-    city: "new plymouth 16",
+    city: "new plymouth - 16",
   },
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-tauranga",
-    city: "tauranga 18",
+    city: "tauranga - 18",
   },
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-auckland",
-    city: "auckland 19",
+    city: "auckland - 19",
   },
 ];
 export default function TicketsModal() {
@@ -41,7 +41,7 @@ export default function TicketsModal() {
         }`}>
         <div className="w-full lg:w-2/3 bg-white rounded-xl p-4 lg:p-8 max-w-[640px] relative">
           <div className="flex justify-between items-center pb-5">
-            <p className="font-back text-primary uppercase text-xl lg:text-3xl">Tickets on sale</p>
+            <p className="font-back text-primary uppercase text-xl lg:text-3xl">Buy Tickets</p>
             <button
               onClick={() => {
                 setShow(false);
@@ -50,28 +50,16 @@ export default function TicketsModal() {
               <XMarkIcon className="w-5 h-5 fill-black stroke-black " />
             </button>
           </div>
-          <div className="flex flex-wrap gap-4 ">
+          <div className="flex flex-col gap-4 ">
             {ticket_links.map((ticket) => (
-              <button
+              <a
                 key={ticket.city}
-                onClick={() => {
-                  setLink(ticket.link);
-                }}
-                className={`${
-                  link === ticket.link
-                    ? "border-primary bg-primary "
-                    : "border-black text-black hover:border-primary hover:text-primary"
-                } border-2   transition-all   flex-[1_1_calc(50%-16px)] p-4  font-back uppercase lg:text-xl text-center`}>
+                href={ticket.link}
+                className={` border-2 border-black bg-primary text-black   transition-all   p-4 flex justify-between items-center  font-back hover:bg-black hover:text-white uppercase lg:text-xl text-center`}>
                 {ticket.city}
-              </button>
+                <ChevronRightIcon className="w-6 h-6 text-inherit stroke-inherit" />
+              </a>
             ))}
-            <a
-              href={link ?? ""}
-              className={`${
-                link ? "bg-primary  border-primary" : "pointer-events-none bg-slate-500"
-              }  text-black border-2 transition-all border-black flex items-center justify-center w-full  p-4 font-back uppercase lg:text-xl text-center`}>
-              buy tickets
-            </a>
           </div>
         </div>
       </div>
