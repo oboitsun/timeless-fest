@@ -33,7 +33,7 @@
       width: 17.5%;
     }
     .freeHat {
-      @apply font-back text-primary uppercase leading-none mx-auto text-balance;
+      @apply font-back text-primary uppercase leading-none m-auto text-balance;
 
       font-size: clamp(18px, 5vw, 64px);
     }
