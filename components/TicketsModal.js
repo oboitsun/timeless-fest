@@ -26,7 +26,7 @@ const ticket_links = [
 ];
 export default function TicketsModal() {
   const [show, setShow] = useState(false);
-  const [link, setLink] = useState();
+
   useEffect(() => {
     document.addEventListener("showBuyModal", (e) => {
       setShow(true);

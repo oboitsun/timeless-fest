@@ -63,7 +63,7 @@ const childVariants = {
 export default function Venue({ venue }) {
   const {
     title,
-
+    ticketLink,
     photo,
     gaInclusions,
     gaPrices,
@@ -114,6 +114,15 @@ export default function Venue({ venue }) {
           {time}
         </motion.p>
       </motion.div>
+      {ticketLink && (
+        <a
+          href={ticketLink}
+          className={
+            "w-full bg-primary border-2 border-black text-center uppercase font-back text-xl lg:text-3xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
+          }>
+          <span className="">Buy Tickets Now</span>
+        </a>
+      )}
       {tiers.map((tier, i) =>
         tier.prices ? (
           <motion.div
