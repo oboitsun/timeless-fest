@@ -33,6 +33,10 @@ export const links = [
     href: "/tickets",
   },
   {
+    label: "Sitemap",
+    href: "/sitemap",
+  },
+  {
     label: "Contact",
     href: "/contact",
   },

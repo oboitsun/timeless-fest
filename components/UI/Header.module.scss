@@ -58,7 +58,7 @@
     }
   }
   .link {
-    @apply font-matiz text-xl uppercase leading-none text-black hover:text-primary;
+    @apply font-matiz text-lg uppercase leading-none text-black hover:text-primary;
     &.active {
       @apply text-primary;
     }
