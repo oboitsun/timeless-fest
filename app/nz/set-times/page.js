@@ -1,8 +1,8 @@
 import { getVenues } from "@/actions";
 import Heading from "@/components/UI/Heading";
+import VenuesTabs from "@/components/VenuesTabs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-import VenuesTabs from "./VenuesTabs";
 
 const options = {
   renderNode: {
@@ -26,7 +26,7 @@ export default async function SetTimes() {
       <div className="wrap flex flex-col gap-5  text-black lg:tex-xl">
         <Heading addClasses="pb-5">Set Times</Heading>
 
-        <VenuesTabs venues={venues} />
+        <VenuesTabs venues={venues} item="set-times" />
       </div>
     </section>
   );

@@ -122,7 +122,7 @@ export default function Header({ country }) {
                     setOpen(false);
                   }}
                   key={l.href}
-                  href={`${l.href}`}
+                  href={`/${country}/${l.href}`}
                   className={`${styles.link} ${
                     location === l.href ? styles.active : "text-black"
                   }`}>

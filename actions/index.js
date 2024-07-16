@@ -20,3 +20,15 @@ export async function getArticles(country = "nz") {
   }
   return res.items ?? [];
 }
+export async function getFAQList(country = "nz") {
+  console.log(country);
+  const res = await client.getEntries({
+    content_type: "faq",
+    "fields.country": country,
+  });
+
+  if (!res) {
+    return {};
+  }
+  return res.items ?? [];
+}

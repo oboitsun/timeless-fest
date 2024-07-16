@@ -3,7 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types";
 
 import { getVenues } from "@/actions";
-import VenuesTabs from "./VenuesTabs";
+import VenuesTabs from "@/components/VenuesTabs";
 
 const options = {
   renderNode: {
@@ -27,7 +27,7 @@ export default async function TicketsPage() {
       <div className="wrap flex flex-col gap-5  text-black lg:tex-xl">
         <Heading addClasses="pb-5">Tickets</Heading>
 
-        <VenuesTabs venues={venues} />
+        <VenuesTabs venues={venues} item="tickets" />
       </div>
     </section>
   );

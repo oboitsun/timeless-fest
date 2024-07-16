@@ -3,7 +3,7 @@
   will-change: height;
   .question {
     @apply w-full flex items-center justify-between text-black uppercase font-bold gap-5;
-    font-size: 32px;
+    font-size: clamp(18px, 1.5vw, 32px);
     line-height: 1;
   }
   &.open {
