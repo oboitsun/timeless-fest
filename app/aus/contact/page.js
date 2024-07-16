@@ -18,7 +18,7 @@ export default function ContactPage() {
           <h2 className="font-matiz uppercase text-3xl">General Enquiries</h2>
           {/* <p>Kristin Ralph</p> */}
           <a href="mailto:info@timelesssummertour.com" className="underline">
-            info@timelesssummertour.com
+            aus@timelesssummertour.com
           </a>
         </div>
       </div>
