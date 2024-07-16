@@ -88,17 +88,19 @@ export default function Header({ country }) {
             />
           </Link>
           <div className="w-10/12 flex flex-grow  justify-around gap-2  max-xl:hidden">
-            {links.map((l) => (
-              <Link
-                prefetch={false}
-                key={l.href}
-                href={`/${country}/${l.href}`}
-                className={`${styles.link} min-w-max  ${
-                  location === `/${country}/${l.href}` ? styles.active : ""
-                }`}>
-                {l.label}
-              </Link>
-            ))}
+            {links
+              .filter((l) => !(country === "aus" && l.href === "sitemap"))
+              .map((l) => (
+                <Link
+                  prefetch={false}
+                  key={l.href}
+                  href={`/${country}/${l.href}`}
+                  className={`${styles.link} min-w-max  ${
+                    location === `/${country}/${l.href}` ? styles.active : ""
+                  }`}>
+                  {l.label}
+                </Link>
+              ))}
           </div>
 
           <button
