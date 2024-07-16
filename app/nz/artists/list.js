@@ -1,7 +1,7 @@
 export const artists = [
   {
     src: "/artists/boy-george.png",
-    name: "Boy George  of  Culture Club performing all his greatest hits",
+    name: "Boy George  of  Culture Club performing  his greatest hits",
     website: "https://boygeorgeandcultureclub.net",
     spotify: "https://open.spotify.com/artist/2BWfZGPtsjRlRp7JTDqI45?si=RZlq2FECRDGQqg7UICRYpQ",
     about: (
