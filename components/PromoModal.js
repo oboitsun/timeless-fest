@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function PromoModal() {
+export default function PromoModal({ country = "nz" }) {
   const [show, setShow] = useState(false);
   return (
     <>
@@ -43,7 +43,11 @@ export default function PromoModal() {
               width="100%"
               height="100%"
               frameBorder={0}
-              src="https://www.youtube.com/embed/SdXsCvmCIvw?si=GVJERKsz70gRbxh2"
+              src={
+                country === "aus"
+                  ? "https://www.youtube.com/embed/lTG6U2vp2gU?si=4MoaICi24kurUp5v"
+                  : "https://www.youtube.com/embed/SdXsCvmCIvw?si=GVJERKsz70gRbxh2"
+              }
               title="YouTube video player"
               allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen></iframe>

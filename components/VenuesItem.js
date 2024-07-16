@@ -4,31 +4,19 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import styles from "./Venue.module.scss";
-const venuesImgs = [
-  {
-    img: "/venues/christchurch.jpeg",
-    city: "Christchurch",
-  },
-  {
-    img: "/venues/napier.jpeg",
-    city: "Napier",
-  },
-  {
-    img: "/venues/new-plymouth.jpeg",
-    city: "New Plymouth",
-  },
-  {
-    img: "/venues/tauranga.jpeg",
-    city: "Tauranga",
-  },
-  {
-    img: "/venues/auckland.jpeg",
-    city: "Auckland",
-  },
-];
+const venues = {
+  Christchurch: "/venues/christchurch.jpeg",
+  Napier: "/venues/napier.jpeg",
+  "New Plymouth": "/venues/new-plymouth.jpeg",
+  Tauranga: "/venues/tauranga.jpeg",
+  Auckland: "/venues/auckland.jpeg",
+  "Yarra Valley": "/venues/yarra-valley.jpeg",
+  "Hunter Valley": "/venues/hunter-valley.jpeg",
+  Sandstone: "/venues/sandstone.jpeg",
+};
 export default function VenuesItem({ venue, leftSide }) {
   const ref = useRef();
-  const inView = useInView(ref, { amount: "all", once: true });
+  const inView = useInView(ref, { amount: "some", once: true });
   const parentVariants = {
     show: {
       opacity: 1,
@@ -71,12 +59,12 @@ export default function VenuesItem({ venue, leftSide }) {
         variants={parentVariants}
         initial="hidden"
         animate={inView ? "show" : "hidden"}
-        className={`relative w-full flex justify-center items-center overflow-hidden max-lg:pb-[50%] ${
+        className={`relative w-full flex justify-center items-center overflow-hidden max-lg:pb-[50%] bg-black/10 ${
           leftSide ? "" : "lg:order-1"
         }`}>
         <Image
           fill
-          src={venuesImgs.find((v) => v.city === venue?.fields?.title)?.img ?? ""}
+          src={venues?.[venue.fields?.title] ?? "/crowd-wide.jpg"}
           alt={venue?.fields?.title}
           className="object-cover z-[-1]"
         />

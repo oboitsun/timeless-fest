@@ -4,13 +4,23 @@ import Image from "next/image";
 import PromoModal from "../PromoModal";
 import { SpotifyIcon } from "../UI/icons";
 import styles from "./Hero.module.scss";
-const artists = [
+const artists_nz = [
   { src: "/artists/boy-george.png", name: "Boy George" },
 
   { src: "/artists/little-river-band.png", name: "Little River Band" },
   { src: "/artists/bonnie-tyler.png", name: "Bonnie Tyler" },
   { src: "/artists/starship.png", name: "Starship" },
 ];
+const artists_aus = [
+  { src: "/artists/boy-george.png", name: "Boy George" },
+  { src: "/artists/bonnie-tyler.png", name: "Bonnie Tyler" },
+  { src: "/artists/tony-hadley.png", name: "Tony Hadley" },
+  { src: "/artists/starship.png", name: "Starship" },
+];
+const artists = {
+  nz: artists_nz,
+  aus: artists_aus,
+};
 const parentVariants = {
   show: {
     opacity: 1,
@@ -37,7 +47,7 @@ const childVariants = {
   }),
 };
 
-export default function HeroSection() {
+export default function HeroSection({ country = "nz" }) {
   return (
     <section className={`${styles.section} gradient`}>
       <Image
@@ -73,7 +83,7 @@ export default function HeroSection() {
               className="w-full h-1/2 flex-grow  object-contain"
               width={524}
               height={259}
-              src={"/dates.png"}
+              src={country === "aus" ? "/dates-au.png" : "/dates.png"}
               alt="dates"
             />
           </motion.div>
@@ -83,7 +93,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="show"
           className="w-full md:w-10/12 max-md:gap-2 grid grid-cols-2 lg:grid-cols-4 pt-5 xl:pt-10">
-          {artists.map(({ src, name }, i) => (
+          {artists?.[country].map(({ src, name }, i) => (
             <motion.div
               variants={childVariants}
               key={i}
@@ -100,10 +110,14 @@ export default function HeroSection() {
           ))}
         </motion.div>
         <div className="mt-5 lg:mt-10 flex max-lg:flex-col  lg:gap-6 button-lines">
-          <PromoModal />
+          <PromoModal country={country} />
           <a
             target="_blank"
-            href="https://open.spotify.com/playlist/21dcPTCRigIqbu7XfEHQIV?si=15db3ffdc43b4cad"
+            href={
+              country === "aus"
+                ? "https://open.spotify.com/playlist/5lpQ1k16zedTv3SIT4mb8j?si=f1111d18afb94b15"
+                : "https://open.spotify.com/playlist/21dcPTCRigIqbu7XfEHQIV?si=15db3ffdc43b4cad"
+            }
             className="promo-btn">
             <span className="relative translate-y-0.5"> Official Spotify Playlist</span>
             <SpotifyIcon className="text-green-400 lg:w-10 w-6" />

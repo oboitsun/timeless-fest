@@ -5,34 +5,34 @@ import Socials from "./Socials";
 export const links = [
   {
     label: "About",
-    href: "/about",
+    href: "about",
   },
   {
     label: "News",
-    href: "/news",
+    href: "news",
   },
   {
     label: "FAQs",
-    href: "/faq",
+    href: "faq",
   },
   {
     label: "Artists",
-    href: "/artists",
+    href: "artists",
   },
   {
     label: "Set Times",
-    href: "/set-times",
+    href: "set-times",
   },
   {
     label: "Tickets",
-    href: "/tickets",
+    href: "tickets",
   },
   {
     label: "Contact",
-    href: "/contact",
+    href: "contact",
   },
 ];
-export default function Footer() {
+export default function Footer({ country = "nz" }) {
   return (
     <footer className={styles.footer}>
       <div className="wrap  py-8 lg:py-16 flex max-xl:flex-wrap gap-5 max-lg:flex-col justify-between items-center">
@@ -48,7 +48,7 @@ export default function Footer() {
         </Link>
         <div className={styles.links}>
           {links.map((l) => (
-            <Link prefetch={false} key={l.href} href={l.href} className="hover:text-primary">
+            <Link prefetch={false} key={l.href} href={`${l.href}`} className="hover:text-primary">
               {l.label}
             </Link>
           ))}
@@ -79,7 +79,7 @@ export default function Footer() {
             </a>
           </p>
           <div className="mx-auto lg:ml-auto lg:mr-20 ">
-            <Socials text="text-white" />
+            <Socials text="text-white" country={country} />
           </div>
         </div>
       </div>

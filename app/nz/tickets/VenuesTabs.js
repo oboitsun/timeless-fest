@@ -1,6 +1,6 @@
 "use client";
+import Venue from "@/components/Venue";
 import { useState } from "react";
-import Venue from "./Venue";
 
 export default function VenuesTabs({ venues }) {
   const [currentTab, setCurrentTab] = useState(

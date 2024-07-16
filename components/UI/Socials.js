@@ -1,9 +1,13 @@
-export default function Socials({ text = "text-black" }) {
+export default function Socials({ text = "text-black", country = "nz" }) {
   return (
     <div className="flex items-center gap-4">
       <a
         className={`${text} hover:text-primary`}
-        href="https://www.facebook.com/share/uHK6W5j7hHFnfGSk/?mibextid=LQQJ4d"
+        href={
+          country === "aus"
+            ? "https://www.facebook.com/timeless.summertour.AUS"
+            : "https://www.facebook.com/share/uHK6W5j7hHFnfGSk/?mibextid=LQQJ4d"
+        }
         target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +23,11 @@ export default function Socials({ text = "text-black" }) {
       </a>
       <a
         className={`${text} hover:text-primary`}
-        href="https://www.instagram.com/timeless.summertour?igsh=b29mZnd5c3kwb2x6"
+        href={
+          country === "aus"
+            ? "https://www.instagram.com/timeless.summertour.aus"
+            : "https://www.instagram.com/timeless.summertour"
+        }
         target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"

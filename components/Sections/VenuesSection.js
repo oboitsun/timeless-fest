@@ -7,16 +7,16 @@ const client = createClient({
   space: process.env.NEXT_APP_CONTENTFUL_SPACE_ID,
   accessToken: process.env.NEXT_APP_CONTENTFUL_API_TOKEN,
 });
-export async function getVenues() {
-  const res = await client.getEntries({ content_type: "venues" });
+export async function getVenues(country) {
+  const res = await client.getEntries({ content_type: "venues", "fields.country": country });
 
   if (!res) {
     return {};
   }
   return res.items ?? [];
 }
-export default async function VenuesSection() {
-  const venuesRes = await getVenues();
+export default async function VenuesSection({ country = "nz" }) {
+  const venuesRes = await getVenues(country);
   return (
     <section className={`${styles.section}`}>
       <div className="wrap relative z-10 ">

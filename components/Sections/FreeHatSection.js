@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useRef } from "react";
 import styles from "./FreeHat.module.scss";
-export default function FreeHatSection({ type = "big" }) {
+export default function FreeHatSection({ type = "big", country = "nz" }) {
   const ref = useRef();
   const inView = useInView(ref, { amount: "some", once: true });
   const openBuyModal = useCallback(() => {
@@ -41,13 +41,18 @@ export default function FreeHatSection({ type = "big" }) {
               }>
               <p className={styles.freeHat}> afterpay Payment Option available</p>
             </div>
-            <button
-              onClick={() => {
-                openBuyModal();
-              }}
-              className={styles.buy}>
-              <span>Buy Tickets</span>
-            </button>
+            {country === "aus" ? (
+              <a
+                className={`${styles.buy} min-w-max`}
+                target="_blank"
+                href="https://arep.co/p/timeless-summer-tour--register-for-pre-sale-access-1">
+                <span className="relative top-px"> Pre-Register</span>
+              </a>
+            ) : (
+              <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
+                <span className="relative top-0.5">buy tickets</span>
+              </button>
+            )}
           </div>
           <Image fill src="/frame.png" alt="Frame" className="object-cover" />
         </div>

@@ -1,16 +1,9 @@
 "use client";
+import FreeHatSection from "@/components/Sections/FreeHatSection";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import FreeHatSection from "../../components/Sections/FreeHatSection";
-const venues = {
-  Christchurch: "/venues/christchurch.jpeg",
-  Napier: "/venues/napier.jpeg",
-  "New Plymouth": "/venues/new-plymouth.jpeg",
-  Tauranga: "/venues/tauranga.jpeg",
-  Auckland: "/venues/auckland.jpeg",
-};
+import VenueHeadImage from "./VenueHeadImage";
 
 const options = {
   renderNode: {
@@ -93,27 +86,7 @@ export default function Venue({ venue }) {
   const [date, time] = venue?.fields?.time?.split(";");
   return (
     <div className="w-full flex flex-col gap-5 xl:gap-10">
-      <motion.div
-        variants={parentVariants}
-        initial="hidden"
-        animate={"show"}
-        className={`relative w-full flex justify-center items-center overflow-hidden pb-[clamp(150px,15vw,240px)] bg-pale-gray`}>
-        <Image
-          fill
-          src={venues?.[title] ?? "/crowd-wide.jpg"}
-          alt={photo.title}
-          className="object-cover object-center opacity-90"
-        />
-        <motion.p
-          variants={childVariants}
-          className={`text-2xl lg:text-4xl xl:text-6xl text-center font-matiz uppercase text-white absolute drop-shadow-md top-1/2 left-1/2 leading-none w-max`}>
-          {title}
-          <br />
-          {date}
-          <br />
-          {time}
-        </motion.p>
-      </motion.div>
+      <VenueHeadImage date={date} time={time} title={title} />
       {ticketLink && (
         <a
           href={ticketLink}

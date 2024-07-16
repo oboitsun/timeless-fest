@@ -1,8 +1,6 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import Footer from "../components/UI/Footer";
-import Header from "../components/UI/Header";
 import "./globals.css";
 export const metadata = {
   title: "Timeless Festival",
@@ -24,9 +22,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-dvh flex flex-col">
-        <Header />
         {children}
-        <Footer />
+
         <Script
           id="chat-bot"
           strategy="afterInteractive"

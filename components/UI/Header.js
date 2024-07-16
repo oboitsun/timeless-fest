@@ -3,49 +3,52 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { useCallback, useEffect, useState } from "react";
 import TicketsModal from "../TicketsModal";
 import styles from "./Header.module.scss";
+import Popper from "./Popper";
 import Socials from "./Socials";
 export const links = [
   {
     label: "About",
-    href: "/about",
+    href: "about",
   },
   {
     label: "News",
-    href: "/news",
+    href: "news",
   },
   {
     label: "FAQs",
-    href: "/faq",
+    href: "faq",
   },
   {
     label: "Artists",
-    href: "/artists",
+    href: "artists",
   },
   {
     label: "Set Times",
-    href: "/set-times",
+    href: "set-times",
   },
   {
     label: "Tickets",
-    href: "/tickets",
+    href: "tickets",
   },
   {
     label: "Sitemap",
-    href: "/sitemap",
+    href: "sitemap",
   },
   {
     label: "Contact",
-    href: "/contact",
+    href: "contact",
   },
 ];
-export default function Header() {
+export default function Header({ country }) {
   const location = usePathname();
-  const isHome = location === "/";
+  const isHome = ["/nz", "/aus"].includes(location);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
   useEffect(() => {
     document.addEventListener("scroll", function (e) {
       if (window.scrollY > 0) {
@@ -73,7 +76,7 @@ export default function Header() {
         <div className="wrap flex justify-between items-center gap-10 w-full">
           <Link
             prefetch={false}
-            href="/"
+            href={`/${country}`}
             className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10">
             <Image
               className="w-full "
@@ -89,8 +92,10 @@ export default function Header() {
               <Link
                 prefetch={false}
                 key={l.href}
-                href={l.href}
-                className={`${styles.link} min-w-max  ${location === l.href ? styles.active : ""}`}>
+                href={`/${country}/${l.href}`}
+                className={`${styles.link} min-w-max  ${
+                  location === `/${country}/${l.href}` ? styles.active : ""
+                }`}>
                 {l.label}
               </Link>
             ))}
@@ -117,7 +122,7 @@ export default function Header() {
                     setOpen(false);
                   }}
                   key={l.href}
-                  href={l.href}
+                  href={`${l.href}`}
                   className={`${styles.link} ${
                     location === l.href ? styles.active : "text-black"
                   }`}>
@@ -125,20 +130,40 @@ export default function Header() {
                 </Link>
               ))}
             </div>
-            <div className="flex flex-col xl:flex-row mt-auto h-1/2 flex-grow justify-end gap-4 items-center">
-              <button
-                onClick={(e) => openBuyModal(e)}
-                className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
-                Buy Tickets
-              </button>
-              <Socials />
+            <div className="flex flex-col xl:flex-row mt-auto h-1/3 flex-grow justify-end gap-4 items-center">
+              <Popper country={country} />
+              {country === "aus" ? (
+                <a
+                  className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white "
+                  target="_blank"
+                  href="https://arep.co/p/timeless-summer-tour--register-for-pre-sale-access-1">
+                  Pre-Register
+                </a>
+              ) : (
+                <button
+                  onClick={(e) => openBuyModal(e)}
+                  className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
+                  Buy Tickets
+                </button>
+              )}
+              <Socials country={country} />
             </div>
           </div>
-          <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden">
-            <Socials text={`text-inherit`} />
-            <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
-              <span className="relative top-0.5">buy tickets</span>
-            </button>
+          <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden items-center">
+            <Popper country={country} />
+            <Socials text={`text-inherit`} country={country} />
+            {country === "aus" ? (
+              <a
+                className={`${styles.buy} min-w-max`}
+                target="_blank"
+                href="https://arep.co/p/timeless-summer-tour--register-for-pre-sale-access-1">
+                Pre-Register
+              </a>
+            ) : (
+              <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
+                <span className="relative top-0.5">buy tickets</span>
+              </button>
+            )}
           </div>
         </div>
       </nav>
