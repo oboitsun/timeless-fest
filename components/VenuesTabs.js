@@ -2,8 +2,9 @@
 import VenueSetTimes from "@/components/VenueSetTimes";
 import { useState } from "react";
 import Venue from "./Venue";
+import VenueAus from "./VenueAus";
 
-export default function VenuesTabs({ venues, item = "tickets" }) {
+export default function VenuesTabs({ venues, item = "tickets", country = "nz" }) {
   const [currentTab, setCurrentTab] = useState(
     venues.sort((a, b) => a?.fields?.order - b?.fields?.order)?.[0]?.fields.slug
   );
@@ -30,7 +31,11 @@ export default function VenuesTabs({ venues, item = "tickets" }) {
       </ul>
       <div className="flex flex-col w-full">
         {item === "tickets" ? (
-          <Venue venue={venues?.find((v) => v?.fields?.slug === currentTab)} />
+          country === "nz" ? (
+            <Venue venue={venues?.find((v) => v?.fields?.slug === currentTab)} />
+          ) : (
+            <VenueAus venue={venues?.find((v) => v?.fields?.slug === currentTab)} />
+          )
         ) : (
           <VenueSetTimes
             key={currentTab}

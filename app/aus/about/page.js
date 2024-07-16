@@ -15,7 +15,7 @@ export default function AboutPage() {
         <p>
           Making its debut in 2025, the inaugural concert series features Boy George of Culture
           Club, Bonnie Tyler, Tony Hadley (ex Spandau Ballet) and Starship featuring Mickey Thomas
-          touring Australian cities Yarra Valley, Hunter Valley and Sandstone Point.
+          touring Australian regions Yarra Valley, Hunter Valley and Sandstone Point.
         </p>
         <p>
           Live entertainment company Timeless Live is dedicated to providing top quality live music

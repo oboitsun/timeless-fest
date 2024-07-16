@@ -32,7 +32,7 @@ export default async function TicketsPage() {
       <div className="wrap flex flex-col gap-5  text-black lg:tex-xl">
         <Heading addClasses="pb-5">Tickets</Heading>
 
-        <VenuesTabs venues={venues} />
+        <VenuesTabs venues={venues} country="aus" />
       </div>
     </section>
   );
