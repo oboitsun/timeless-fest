@@ -5,31 +5,31 @@ import Socials from "./Socials";
 export const links = [
   {
     label: "About",
-    href: "about",
+    href: "/about",
   },
   {
     label: "News",
-    href: "news",
+    href: "/news",
   },
   {
     label: "FAQs",
-    href: "faq",
+    href: "/faq",
   },
   {
     label: "Artists",
-    href: "artists",
+    href: "/artists",
   },
   {
     label: "Set Times",
-    href: "set-times",
+    href: "/set-times",
   },
   {
     label: "Tickets",
-    href: "tickets",
+    href: "/tickets",
   },
   {
     label: "Contact",
-    href: "contact",
+    href: "/contact",
   },
 ];
 export default function Footer({ country = "nz" }) {
@@ -48,7 +48,11 @@ export default function Footer({ country = "nz" }) {
         </Link>
         <div className={styles.links}>
           {links.map((l) => (
-            <Link prefetch={false} key={l.href} href={`${l.href}`} className="hover:text-primary">
+            <Link
+              prefetch={false}
+              key={l.href}
+              href={`/${country}${l.href}`}
+              className="hover:text-primary">
               {l.label}
             </Link>
           ))}
