@@ -12,7 +12,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="facebook-domain-verification" content="xw9v1eeipdk4tl4ylcq2m6m2txmfqm" />
         <link href="https://fonts.cdnfonts.com/css/backcountry" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true.toString()} />
@@ -35,7 +34,7 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1678784732863468');
+fbq('init', '463061893331966');
 fbq('track', 'PageView');`,
           }}
         />
