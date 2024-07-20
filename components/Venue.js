@@ -104,7 +104,7 @@ export default function Venue({ venue }) {
             transition={{ delay: (i + 1) * 0.5 }}
             key={tier.id}
             className="w-full flex max-lg:flex-col gap-5 xl:gap-10 2xl:gap-16 bg-white p-5 lg:p-7 xl:p-10  ">
-            <div className="flex flex-col w-fit xl:min-w-max ">
+            <div className="flex flex-col w-fit xl:min-w-max xl:w-full xl:max-w-[320px]">
               <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter">
                 {tier.id} Price:
               </p>

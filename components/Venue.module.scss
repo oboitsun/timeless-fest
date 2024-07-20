@@ -3,3 +3,8 @@
   z-index: 1;
   font-size: clamp(28px, 4vw, 44px);
 }
+.venueTier {
+  h4 {
+    @apply font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter;
+  }
+}
