@@ -238,6 +238,11 @@ const hunter_valley = {
       prices: <></>,
       inclusions: (
         <ul>
+          <li className="mb-7">
+            3.5 hour cocktail party in front of the cellar door with view of the stage. Party begins
+            from gates. Includes beverage (beer, wine, soft drink) and hot and cold cocktail food -
+            <b>$200</b>
+          </li>
           <li>
             {" "}
             Hamper for 2 people - <b>$129*</b>
@@ -245,11 +250,6 @@ const hunter_valley = {
           <li>
             {" "}
             Hamper Gluten free or vegetarian options-<b> $139*</b>
-          </li>
-          <li>
-            3.5 hour cocktail party in front of the cellar door with view of the stage. Party begins
-            from gates. Includes beverage (beer, wine, soft drink) and hot and cold cocktail food -
-            <b>$200</b>
           </li>
         </ul>
       ),
