@@ -218,23 +218,10 @@ const hunter_valley = {
         </>
       ),
     },
-    {
-      id: "gold-allocated",
-      title: " Gold Allocated Seating",
-      prices: (
-        <p>
-          <b>$299*</b>
-        </p>
-      ),
-      inclusions: (
-        <>
-          <p>Gold Allocated Seating – First release</p>
-        </>
-      ),
-    },
+
     {
       id: "addon",
-      title: "Venue Add on - Cocktail party",
+      title: "Venue Addons",
       prices: <></>,
       inclusions: (
         <ul>
