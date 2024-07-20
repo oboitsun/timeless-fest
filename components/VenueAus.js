@@ -72,7 +72,7 @@ export default function Venue({ venue }) {
           transition={{ delay: (i + 1) * 0.2 }}
           key={tier.id}
           className={`${styles.venueTier} w-full flex max-lg:flex-col gap-5 xl:gap-10 2xl:gap-14 bg-white p-5 lg:p-7 xl:p-10 `}>
-          <div className="flex flex-col w-full  max-w-[320px] ">
+          <div className="flex flex-col w-full  max-w-[260px] ">
             <div className={"text-black lg:text-xl"}>
               <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter mb-5">
                 {tier.title}
@@ -83,7 +83,7 @@ export default function Venue({ venue }) {
           </div>
           <div className="h-full w-px bg-black/25"></div>
           <div className="flex flex-col *:list-disc">
-            <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter">
+            <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter mb-5">
               Inclusions:
             </p>
             {/* <ul className="lg:columns-2 gap-x-4 list-disc">

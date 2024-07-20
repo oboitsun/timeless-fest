@@ -64,6 +64,7 @@ const yarra_valley = {
         </>
       ),
     },
+
     {
       id: "vip-conservatory",
       title: " VIP + Conservatory Experience",
@@ -77,6 +78,30 @@ const yarra_valley = {
           <p>
             Access to the General Admission areas of the venue PLUS access to The Conservatory with
             an antipasto board, private bar, shade & outdoor terrace
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "vip-deck",
+      title: " VIP + Deck experience",
+      prices: (
+        <p>
+          <b>$304*</b>
+        </p>
+      ),
+      inclusions: (
+        <>
+          <p>
+            Access to the General Admission area of the show PLUS access to the Deck which includes
+            antipasto platter, option to purchase additional food items, undercover area, private
+            bar, private toilets, limited restaurant seating. Scenic deck over the lake with views
+            of the winery and surrounding valley.
+          </p>
+          <br />
+          <br />
+          <p>
+            <em>NOTE: There are no direct views towards the stage from the Deck</em>
           </p>
         </>
       ),
@@ -213,12 +238,18 @@ const hunter_valley = {
       prices: <></>,
       inclusions: (
         <ul>
-          <li>Venue Add on - Hamper for 2 people: $129*</li>
-          <li>Venue Add on - Hamper Gluten free or vegetarian options: $139*</li>
+          <li>
+            {" "}
+            Hamper for 2 people - <b>$129*</b>
+          </li>
+          <li>
+            {" "}
+            Hamper Gluten free or vegetarian options-<b> $139*</b>
+          </li>
           <li>
             3.5 hour cocktail party in front of the cellar door with view of the stage. Party begins
-            from gates. Includes beverage (beer, wine, soft drink) and hot and cold cocktail food
-            $200
+            from gates. Includes beverage (beer, wine, soft drink) and hot and cold cocktail food -
+            <b>$200</b>
           </li>
         </ul>
       ),
