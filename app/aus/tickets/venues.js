@@ -241,7 +241,7 @@ const hunter_valley = {
           <li className="mb-7">
             3.5 hour cocktail party in front of the cellar door with view of the stage. Party begins
             from gates. Includes beverage (beer, wine, soft drink) and hot and cold cocktail food -
-            <b>$200</b>
+            <b>$200*</b>
           </li>
           <li>
             {" "}
