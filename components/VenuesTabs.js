@@ -24,7 +24,7 @@ export default function VenuesTabs({ venues, item = "tickets", country = "nz" })
                   setCurrentTab(v?.fields?.slug);
                 }
               }}
-              key={v.sys.id}>
+              key={v?.sys?.id ?? v?.fields?.slug}>
               {v?.fields?.title}
             </li>
           ))}
