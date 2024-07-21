@@ -1,7 +1,7 @@
 const yarra_valley = {
   title: "Yarra Valley",
   slug: "yarra-valley",
-  time: "JAN 24;1PM-7:30PM",
+  time: "JAN 24;2PM-10PM",
   order: 1,
   tiers: [
     {
