@@ -16,7 +16,7 @@ const yarra_valley = {
             GA (1st Release): <b>$219*</b>
           </li>
           <li>
-            GA (Final Release): <b>$239*</b>
+            GA (Final Release): <b>$229*</b>
           </li>
         </ul>
       ),
@@ -133,13 +133,16 @@ const yarra_valley = {
         </p>
       ),
       inclusions: (
-        <>
-          <p>
+        <ul>
+          <li>
             Make your way to Timeless Summer Tour Yarra Valley with ease with Melbourne on the move.
+          </li>
+          <li>
+            {" "}
             Book a return bus ticket when you purchase your ticket from Ticketfairy. With multiple
             pick up locations and times around Melbourne.
-          </p>
-        </>
+          </li>
+        </ul>
       ),
     },
   ],
@@ -179,6 +182,16 @@ const hunter_valley = {
     {
       id: "golden-allocated",
       title: "Gold Allocated Seating",
+      prices: (
+        <p>
+          <b>$299*</b>
+        </p>
+      ),
+      inclusions: <p>Close to stage allocated seating, Express early entry</p>,
+    },
+    {
+      id: "silver-allocated",
+      title: "Silver Allocated Seating",
       prices: (
         <ul>
           <li>
