@@ -155,7 +155,7 @@ const hunter_valley = {
   tiers: [
     {
       id: "golden-views",
-      title: "Golden Views experience",
+      title: "Platinum",
       prices: (
         <ul>
           <li>
