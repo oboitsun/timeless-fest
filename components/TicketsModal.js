@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 const ticket_links_nz = [
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-christchurch-11jan2025",
-    city: "Christchurch - 11",
+    city: "Christchurch - JAN 11",
   },
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-napier",
-    city: "napier - 12",
+    city: "napier - JAN 12",
   },
   {
     link: "https://premier.ticketek.co.nz/shows/show.aspx?sh=TIMELESS25",
