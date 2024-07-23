@@ -3,6 +3,7 @@ import FreeHatSection from "@/components/Sections/FreeHatSection";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import SitemapModal from "./UI/SitemapModal";
 import styles from "./Venue.module.scss";
@@ -40,7 +41,7 @@ export default function Venue({ venue }) {
               <span className="">Buy Tickets Now</span>
             </a>
           )}
-          {sitemap && (
+          {/* {sitemap && (
             <button
               onClick={() => {
                 setShowModal(true);
@@ -50,7 +51,7 @@ export default function Venue({ venue }) {
               }>
               <span className="">sitemap</span>
             </button>
-          )}
+          )} */}
         </div>
       ) : (
         ""
@@ -86,17 +87,15 @@ export default function Venue({ venue }) {
           </div>
         </motion.div>
       ))}
-      {/* {additionalOptions && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: (3 + 1) * 0.5 }}
-          className={`${styles.venueTier} w-full flex max-lg:flex-col gap-5 xl:gap-10 2xl:gap-14 bg-white p-5 lg:p-7 xl:p-10 `}>
-          <div className="flex flex-col w-full  *:list-disc">
-            {documentToReactComponents(additionalOptions, options)}
-          </div>
-        </motion.div>
-      )} */}
+      {sitemap && (
+        <Image
+          width={1235}
+          height={1280}
+          src={sitemap}
+          className="w-full md:w-1/2 mx-auto"
+          alt="Sitemap"
+        />
+      )}
       <p className="text-sm">*Booking fees apply</p>
       <FreeHatSection type="small" country="aus" />
       <SitemapModal show={showModal} imgSrc={sitemap} setShow={setShowModal} />
