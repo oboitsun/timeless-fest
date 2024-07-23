@@ -3,6 +3,8 @@ import FreeHatSection from "@/components/Sections/FreeHatSection";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import SitemapModal from "./UI/SitemapModal";
 import styles from "./Venue.module.scss";
 import VenueHeadImage from "./VenueHeadImage";
 const options = {
@@ -21,49 +23,37 @@ const options = {
 };
 
 export default function Venue({ venue }) {
-  // const {
-  //   title,
-  //   ticketLink,
-  //   photo,
-  //   gaInclusions,
-  //   gaPrices,
-  //   vipPrices,
-  //   vipInclusions,
-  //   platinumPrices,
-  //   platinumInlcusions,
-  //   additionalOptions,
-  // } = venue?.fields || {};
-
-  // const tiers = [
-  //   {
-  //     id: "ga",
-  //     prices: gaPrices,
-  //     inclusions: gaInclusions,
-  //   },
-  //   {
-  //     id: "vip",
-  //     prices: vipPrices,
-  //     inclusions: vipInclusions,
-  //   },
-  //   {
-  //     id: "platinum",
-  //     prices: platinumPrices,
-  //     inclusions: platinumInlcusions,
-  //   },
-  // ];
-  const { title, ticketLink, tiers } = venue?.fields || {};
+  const { title, ticketLink, tiers, sitemap } = venue?.fields || {};
   const [date, time] = venue?.fields?.time?.split(";");
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="w-full flex flex-col gap-5 xl:gap-10">
       <VenueHeadImage date={date} time={time} title={title} />
-      {ticketLink && (
-        <a
-          href={ticketLink}
-          className={
-            "w-full bg-primary border-2 border-black text-center uppercase font-back text-xl lg:text-3xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
-          }>
-          <span className="">Buy Tickets Now</span>
-        </a>
+      {ticketLink || sitemap ? (
+        <div className="flex max-md:flex-col gap-2 lg:gap-4">
+          {ticketLink && (
+            <a
+              href={ticketLink}
+              className={
+                "w-full bg-primary border-2 border-black text-center uppercase font-back text-xl lg:text-3xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
+              }>
+              <span className="">Buy Tickets Now</span>
+            </a>
+          )}
+          {sitemap && (
+            <button
+              onClick={() => {
+                setShowModal(true);
+              }}
+              className={
+                "w-full bg-black border-2 border-primary hover:border-black text-center uppercase font-back text-xl lg:text-3xl py-2 lg:py-4 hover:bg-primary hover:text-black text-white hover:shadow-lg transition-all"
+              }>
+              <span className="">sitemap</span>
+            </button>
+          )}
+        </div>
+      ) : (
+        ""
       )}
       {tiers.map((tier, i) => (
         <motion.div
@@ -109,6 +99,7 @@ export default function Venue({ venue }) {
       )} */}
       <p className="text-sm">*Booking fees apply</p>
       <FreeHatSection type="small" country="aus" />
+      <SitemapModal show={showModal} imgSrc={sitemap} setShow={setShowModal} />
     </div>
   );
 }

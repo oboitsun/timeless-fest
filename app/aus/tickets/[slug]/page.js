@@ -2,6 +2,7 @@ import Heading from "@/components/UI/Heading";
 import VenuesTabs from "@/components/VenuesTabs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import { createClient } from "contentful";
 import Link from "next/link";
 import { venues } from "../venues";
 
@@ -19,6 +20,19 @@ const options = {
     },
   },
 };
+export const client = createClient({
+  space: process.env.NEXT_APP_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_APP_CONTENTFUL_API_TOKEN,
+});
+export async function generateStaticParams({ params }) {
+  const res = await client.getEntries({
+    content_type: "venues",
+    "fields.country": "aus",
+    "fields.slug": params.slug,
+  });
+  const paths = res.items.map((item) => ({ slug: item.fields.slug, id: item.sys.id }));
+  return paths;
+}
 export default async function TicketPage({ params }) {
   return (
     <section style={{ paddingBottom: 0 }} className="section h-1/2 flex-grow ">

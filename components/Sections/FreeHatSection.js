@@ -41,18 +41,9 @@ export default function FreeHatSection({ type = "big", country = "nz" }) {
               }>
               <p className={styles.freeHat}> afterpay Payment Option available</p>
             </div>
-            {country === "aus" ? (
-              <a
-                className={`${styles.buy} min-w-max`}
-                target="_blank"
-                href="https://arep.co/p/timeless-summer-tour--register-for-pre-sale-access-1">
-                <span className="relative top-px"> Pre-Register</span>
-              </a>
-            ) : (
-              <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
-                <span className="relative top-0.5">buy tickets</span>
-              </button>
-            )}
+            <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
+              <span className="relative top-px">buy tickets</span>
+            </button>
           </div>
           <Image fill src="/frame.png" alt="Frame" className="object-cover" />
         </div>

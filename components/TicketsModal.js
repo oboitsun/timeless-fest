@@ -13,42 +13,42 @@ const ticket_links_nz = [
   },
   {
     link: "https://premier.ticketek.co.nz/shows/show.aspx?sh=TIMELESS25",
-    city: "new plymouth - 16",
+    city: "new plymouth - JAN 16",
   },
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-tauranga",
-    city: "tauranga - 18",
+    city: "tauranga - JAN 18",
   },
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-auckland",
-    city: "auckland - 19",
+    city: "auckland - JAN 19",
   },
 ];
 const ticket_links_au = [
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-yarra-valley",
-    city: "Yarra Valley - JAN 24",
+    city: "Yarra Valley - JAN 24 - All tickets",
   },
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-hunter-valley",
-    city: "Hunter Valley - JAN 25",
+    city: "Hunter Valley - JAN 25 - All tickets",
   },
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-sandstone",
-    city: "Sandstone (GA) - Jan 27",
+    city: "Sandstone - Jan 27 - GA + Golden Views",
   },
   {
-    link: "https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0?Event=195829",
-    city: "Sandstone (VIP) - Jan 27",
+    link: "https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0",
+    city: "Sandstone - Jan 27 - VIP",
   },
-  {
-    link: "https://oztixspecialoffers.oztix.com.au/outlet/event/576036d1-f722-4a4f-9b21-6e95c9484465",
-    city: "Sandstone (Hamper)",
-  },
-  {
-    link: "https://sandstonepoint.oztix.com.au/outlet/event/576036d1-f722-4a4f-9b21-6e95c9484465",
-    city: "Sandstone (Car Park & Buses)",
-  },
+  // {
+  //   link: "https://oztixspecialoffers.oztix.com.au/outlet/event/576036d1-f722-4a4f-9b21-6e95c9484465",
+  //   city: "Sandstone (Hamper)",
+  // },
+  // {
+  //   link: "https://sandstonepoint.oztix.com.au/outlet/event/576036d1-f722-4a4f-9b21-6e95c9484465",
+  //   city: "Sandstone (Car Park & Buses)",
+  // },
 ];
 const ticket_links = {
   nz: ticket_links_nz,

@@ -3,6 +3,8 @@ const yarra_valley = {
   slug: "yarra-valley",
   time: "JAN 24;2PM-10PM",
   order: 1,
+  ticketLink: "https://www.ticketfairy.com/event/timeless-summer-tour-yarra-valley",
+  sitemap: "/venues/yarra-valley-sitemap.jpeg",
   tiers: [
     {
       id: "ga",
@@ -152,6 +154,8 @@ const hunter_valley = {
   slug: "hunter-valley",
   time: "JAN 25;3:30PM-10PM",
   order: 2,
+  ticketLink: "https://www.ticketfairy.com/event/timeless-summer-tour-hunter-valley",
+
   tiers: [
     {
       id: "golden-views",
@@ -261,6 +265,7 @@ const sandstone = {
   title: "Sandstone",
   time: "JAN 27;1PM-8:30PM",
   slug: "sandstone",
+  sitemap: "/venues/sandstone-sitemap.jpeg",
   order: 3,
   tiers: [
     {
@@ -277,6 +282,16 @@ const sandstone = {
           <li>
             GA (Final Release): <b>$239*</b>
           </li>
+          <li>
+            <a
+              href="https://www.ticketfairy.com/event/timeless-summer-tour-sandstone"
+              target="_blank"
+              className={
+                "inline-flex justify-center w-full mt-3 bg-primary border-2 border-black text-center uppercase font-back text-lg  lg:text-2xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
+              }>
+              <span className="">Buy Tickets Now</span>
+            </a>
+          </li>
         </ul>
       ),
       inclusions: (
@@ -290,10 +305,20 @@ const sandstone = {
       id: "golden",
       title: "Golden views experience ",
       prices: (
-        <p>
-          Front of stage, express entry:
-          <b>$299*</b>
-        </p>
+        <>
+          <p>
+            Front of stage, express entry:
+            <b>$299*</b>
+          </p>
+          <a
+            href="https://www.ticketfairy.com/event/timeless-summer-tour-sandstone"
+            target="_blank"
+            className={
+              "inline-flex justify-center w-full mt-3 bg-primary border-2 border-black text-center uppercase font-back text-lg  lg:text-2xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
+            }>
+            <span className="">Buy Tickets Now</span>
+          </a>
+        </>
       ),
       inclusions: (
         <p>
@@ -307,9 +332,19 @@ const sandstone = {
       id: "vip-garden",
       title: "VIP – waterview and Oasis",
       prices: (
-        <p>
-          <b>$350*</b>
-        </p>
+        <>
+          <p>
+            <b>$350*</b>
+          </p>
+          <a
+            href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"
+            target="_blank"
+            className={
+              "inline-flex justify-center w-full mt-3 bg-primary border-2 border-black text-center uppercase font-back text-lg  lg:text-2xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
+            }>
+            <span className="">Buy Tickets Now</span>
+          </a>
+        </>
       ),
       inclusions: (
         <ul>
@@ -322,9 +357,19 @@ const sandstone = {
       id: "vip-deck",
       title: "VIP – Deck view",
       prices: (
-        <p>
-          <b>$360*</b>
-        </p>
+        <>
+          <p>
+            <b>$360*</b>
+          </p>
+          <a
+            href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"
+            target="_blank"
+            className={
+              "inline-flex justify-center w-full mt-3 bg-primary border-2 border-black text-center uppercase font-back text-lg  lg:text-2xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
+            }>
+            <span className="">Buy Tickets Now</span>
+          </a>
+        </>
       ),
       inclusions: (
         <ul>
@@ -338,9 +383,19 @@ const sandstone = {
       id: "platinum",
       title: "Platinum VVIP",
       prices: (
-        <p>
-          <b>$450*</b>
-        </p>
+        <>
+          <p>
+            <b>$450*</b>
+          </p>
+          <a
+            href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"
+            target="_blank"
+            className={
+              "inline-flex justify-center w-full mt-3 bg-primary border-2 border-black text-center uppercase font-back text-lg  lg:text-2xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
+            }>
+            <span className="">Buy Tickets Now</span>
+          </a>
+        </>
       ),
       inclusions: (
         <ul>
