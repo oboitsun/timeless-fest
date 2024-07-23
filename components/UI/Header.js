@@ -134,42 +134,26 @@ export default function Header({ country }) {
             </div>
             <div className="flex flex-col xl:flex-row mt-auto h-1/3 flex-grow justify-end gap-4 items-center">
               <Popper country={country} />
-              {country === "aus" ? (
-                <a
-                  className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white "
-                  target="_blank"
-                  href="https://arep.co/p/timeless-summer-tour--register-for-pre-sale-access-1">
-                  Pre-Register
-                </a>
-              ) : (
-                <button
-                  onClick={(e) => openBuyModal(e)}
-                  className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
-                  Buy Tickets
-                </button>
-              )}
+              <button
+                onClick={(e) => openBuyModal(e)}
+                className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white ">
+                Buy Tickets
+              </button>
+
               <Socials country={country} />
             </div>
           </div>
           <div className="flex flex-col gap-4 xl:flex-row max-xl:hidden items-center">
             <Popper country={country} />
             <Socials text={`text-inherit`} country={country} />
-            {country === "aus" ? (
-              <a
-                className={`${styles.buy} min-w-max`}
-                target="_blank"
-                href="https://arep.co/p/timeless-summer-tour--register-for-pre-sale-access-1">
-                Pre-Register
-              </a>
-            ) : (
-              <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
-                <span className="relative top-0.5">buy tickets</span>
-              </button>
-            )}
+
+            <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
+              <span className="relative top-0.5">buy tickets</span>
+            </button>
           </div>
         </div>
       </nav>
-      <TicketsModal />
+      <TicketsModal country={country} />
     </>
   );
 }

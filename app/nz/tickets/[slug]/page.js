@@ -3,7 +3,22 @@ import VenuesTabs from "@/components/VenuesTabs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import Link from "next/link";
-import { venues } from "./venues";
+
+import { getVenues } from "@/actions";
+import { createClient } from "contentful";
+export const client = createClient({
+  space: process.env.NEXT_APP_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_APP_CONTENTFUL_API_TOKEN,
+});
+export async function generateStaticParams({ params }) {
+  const res = await client.getEntries({
+    content_type: "venues",
+    "fields.country": "nz",
+    "fields.slug": params.slug,
+  });
+  const paths = res.items.map((item) => ({ slug: item.fields.slug, id: item.sys.id }));
+  return paths;
+}
 
 const options = {
   renderNode: {
@@ -19,13 +34,14 @@ const options = {
     },
   },
 };
-export default async function TicketsPage() {
+export default async function TicketPage({ params }) {
+  const venues = await getVenues("nz");
   return (
     <section style={{ paddingBottom: 0 }} className="section h-1/2 flex-grow ">
       <div className="wrap flex flex-col gap-5  text-black lg:tex-xl">
         <Heading addClasses="pb-5">Tickets</Heading>
 
-        <VenuesTabs city={"yarra-valley"} venues={venues} country="aus" />
+        <VenuesTabs city={params?.slug} venues={venues} country="nz" />
       </div>
       <div className="bg-orange mt-10 xl:mt-20">
         <div className="wrap flex max-md:flex-col py-5 lg:py-10 xl:py-20 items-center justify-between gap-4">

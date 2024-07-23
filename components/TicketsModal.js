@@ -2,7 +2,7 @@
 
 import { ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
-const ticket_links = [
+const ticket_links_nz = [
   {
     link: "https://www.ticketfairy.com/event/timeless-summer-tour-christchurch-11jan2025",
     city: "Christchurch - 11",
@@ -24,7 +24,37 @@ const ticket_links = [
     city: "auckland - 19",
   },
 ];
-export default function TicketsModal() {
+const ticket_links_au = [
+  {
+    link: "https://www.ticketfairy.com/event/timeless-summer-tour-yarra-valley",
+    city: "Yarra Valley - JAN 24",
+  },
+  {
+    link: "https://www.ticketfairy.com/event/timeless-summer-tour-hunter-valley",
+    city: "Hunter Valley - JAN 25",
+  },
+  {
+    link: "https://www.ticketfairy.com/event/timeless-summer-tour-sandstone",
+    city: "Sandstone (GA) - Jan 27",
+  },
+  {
+    link: "https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0?Event=195829",
+    city: "Sandstone (VIP) - Jan 27",
+  },
+  {
+    link: "https://oztixspecialoffers.oztix.com.au/outlet/event/576036d1-f722-4a4f-9b21-6e95c9484465",
+    city: "Sandstone (Hamper)",
+  },
+  {
+    link: "https://sandstonepoint.oztix.com.au/outlet/event/576036d1-f722-4a4f-9b21-6e95c9484465",
+    city: "Sandstone (Car Park & Buses)",
+  },
+];
+const ticket_links = {
+  nz: ticket_links_nz,
+  aus: ticket_links_au,
+};
+export default function TicketsModal({ country = "nz" }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -51,7 +81,7 @@ export default function TicketsModal() {
             </button>
           </div>
           <div className="flex flex-col gap-4 ">
-            {ticket_links.map((ticket) => (
+            {ticket_links?.[country]?.map((ticket) => (
               <a
                 key={ticket.city}
                 href={ticket.link}

@@ -54,10 +54,11 @@ export default function VenuesItem({ venue, leftSide }) {
   const [date, time] = venue?.fields?.time?.split(";");
   return (
     <div className="w-full grid lg:grid-cols-2 gap-3 lg:gap-7 2xl:gap-10">
-      <motion.div
+      <motion.a
         ref={ref}
         variants={parentVariants}
         initial="hidden"
+        href={`/${venue.fields.country}/tickets/${venue.fields.slug}`}
         animate={inView ? "show" : "hidden"}
         className={`relative w-full flex justify-center items-center overflow-hidden max-lg:pb-[50%] bg-black/10 ${
           leftSide ? "" : "lg:order-1"
@@ -75,7 +76,7 @@ export default function VenuesItem({ venue, leftSide }) {
           <br />
           {time}
         </motion.p>
-      </motion.div>
+      </motion.a>
       <motion.div
         initial={{ opacity: 0 }}
         animate={!inView ? { opacity: 0 } : { opacity: 1 }}
