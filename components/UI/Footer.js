@@ -80,31 +80,21 @@ export default function Footer({ country = "nz" }) {
             {country === "nz" ? (
               <>
                 <p className="font-back uppercase ">
-                  Timeless Summer Tour Aotearoa New Zealand is proudly produced by Timeless Events
-                  Global Limited
+                  Timeless Summer Tour New Zealand is proudly produced by Timeless Events Global
+                  Limited
                 </p>
-                <a
-                  className="underline font-back uppercase  hover:text-primary"
-                  href="tel:9429050280568"
-                  target="_blank">
-                  NZBN: 9429050280568
-                </a>
+                <a className="underline font-back uppercase  ">NZBN: 9429050280568</a>
               </>
             ) : (
               <>
                 <p className="font-back uppercase ">
-                  Timeless Summer Tour Aotearoa Australia is proudly produced by Timeless Events
-                  Australia Limited
+                  Timeless Summer Tour Australia is proudly produced by Timeless Events Australia
+                  Limited
                 </p>
-                <a
-                  className="underline font-back uppercase  hover:text-primary"
-                  href="tel:89672074181"
-                  target="_blank">
-                  ABN: 89 672 074 181
-                </a>
+                <p className="underline font-back uppercase  ">ABN: 89 672 074 181</p>
               </>
             )}
-            <p className="text-center mt-5">
+            <p className=" mt-5">
               Website powered by{" "}
               <a
                 className="underline hover:text-primary "

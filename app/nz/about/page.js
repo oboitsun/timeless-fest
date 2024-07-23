@@ -33,12 +33,9 @@ export default function AboutPage() {
           has been involved in some of the biggest music events in New Zealand and overseas.{" "}
         </p>
         <p className="">
-          Timeless Summer Tour Aotearoa New Zealand is proudly produced by Timeless Events Global
-          Limited
+          Timeless Summer Tour New Zealand is proudly produced by Timeless Events Global Limited
         </p>
-        <a className="underline hover:text-primary" href="tel:9429050280568" target="_blank">
-          NZBN: 9429050280568
-        </a>
+        <p className="underline ">NZBN: 9429050280568</p>
       </div>
     </section>
   );
