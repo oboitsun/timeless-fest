@@ -155,7 +155,7 @@ const hunter_valley = {
   time: "JAN 25;3:30PM-10PM",
   order: 2,
   ticketLink: "https://www.ticketfairy.com/event/timeless-summer-tour-hunter-valley",
-
+  sitemap: "/venues/hunter-valley-sitemap.jpeg",
   tiers: [
     {
       id: "golden-views",
