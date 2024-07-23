@@ -108,7 +108,7 @@ export default function Venue({ venue }) {
         </motion.div>
       )} */}
       <p className="text-sm">*Booking fees apply</p>
-      <FreeHatSection type="small" />
+      <FreeHatSection type="small" country="aus" />
     </div>
   );
 }

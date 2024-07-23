@@ -26,6 +26,13 @@ export default function AboutPage() {
           Timeless Summer Tour may be a new event, but the team behind it is an experienced one
           behind major live music events in Australia and New Zealand.
         </p>
+        <p className=" ">
+          Timeless Summer Tour Aotearoa Australia is proudly produced by Timeless Events Australia
+          Limited
+        </p>
+        <a className="underline   hover:text-primary" href="tel:89672074181" target="_blank">
+          ABN: 89 672 074 181
+        </a>
       </div>
     </section>
   );
