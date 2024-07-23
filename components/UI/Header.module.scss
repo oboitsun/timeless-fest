@@ -67,7 +67,7 @@
   @media (min-width: 1280px) {
     position: relative;
     &.fixed {
-      height: 120px;
+      height: auto;
       position: fixed;
       top: 0;
       left: 0;
@@ -78,7 +78,7 @@
     }
     &.fixed.scrolled {
       @apply bg-pale-gray py-2 lg:py-3  border-b-black/25;
-      height: 75px;
+
       .link {
         @apply text-black hover:text-primary;
       }
