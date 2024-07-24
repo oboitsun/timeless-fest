@@ -426,4 +426,4 @@ const tony_hadley = {
   ),
 };
 export const artists = [boy_george, little_river, bonnie_tyler, starship];
-export const artists_aus = [boy_george, bonnie_tyler, tony_hadley, starship];
+export const artists_aus = [boy_george, starship, bonnie_tyler, tony_hadley];

@@ -13,9 +13,9 @@ const artists_nz = [
 ];
 const artists_aus = [
   { src: "/artists/boy-george.png", name: "Boy George" },
+  { src: "/artists/starship.png", name: "Starship" },
   { src: "/artists/bonnie-tyler.png", name: "Bonnie Tyler" },
   { src: "/artists/tony-hadley.png", name: "Tony Hadley" },
-  { src: "/artists/starship.png", name: "Starship" },
 ];
 const artists = {
   nz: artists_nz,
