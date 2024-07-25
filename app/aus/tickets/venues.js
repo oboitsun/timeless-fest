@@ -153,6 +153,21 @@ const yarra_valley = {
             <b>From $43.03 return</b>
           </p>
           <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
+      ),
+      inclusions: (
+        <>
+          <ul>
+            <li>
+              Make your way to Timeless Summer Tour Yarra Valley with ease with Melbourne on the
+              move.
+            </li>
+            <li>
+              {" "}
+              Book a return bus ticket when you purchase your ticket from Ticketfairy. With multiple
+              pick up locations and times around Melbourne.
+            </li>
+          </ul>
           <h5 className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter my-5">
             Accommodations
           </h5>
@@ -166,18 +181,6 @@ const yarra_valley = {
             </a>
           </p>
         </>
-      ),
-      inclusions: (
-        <ul>
-          <li>
-            Make your way to Timeless Summer Tour Yarra Valley with ease with Melbourne on the move.
-          </li>
-          <li>
-            {" "}
-            Book a return bus ticket when you purchase your ticket from Ticketfairy. With multiple
-            pick up locations and times around Melbourne.
-          </li>
-        </ul>
       ),
     },
     {
@@ -349,7 +352,7 @@ const hunter_valley = {
           <p>
             Various accommodation options can be found{" "}
             <a
-              className="underline text-primary"
+              className="underline text-primary break-all"
               href="https://www.winecountry.com.au/accommodation"
               target="_blank">
               https://www.winecountry.com.au/accommodation
@@ -579,7 +582,7 @@ const sandstone = {
           <p>
             Accommodation is available at
             <a
-              className="underline text-primary"
+              className="underline text-primary break-all"
               href="https://sandstonepointholidayresort.com.au/"
               target="_blank">
               https://sandstonepointholidayresort.com.au/
@@ -620,8 +623,8 @@ const sandstone = {
             <li>
               Low back beach chairs/ festival chairs are allowed providing the legs of the chair do
               not exceed 20cm. No standard BYO folding chairs are allowed in at any concert.
-              Sandstone Point Hotel’s official festival chairs may be purchased at the venue on the
-              day (subject to availability)
+              Sandstone Point Hotel&apos;s official festival chairs may be purchased at the venue on
+              the day (subject to availability)
             </li>
             <li>No aerosols, no hard eskies.</li>
           </ul>

@@ -38,7 +38,7 @@ fbq('init', '463061893331966');
 fbq('track', 'PageView');`,
           }}
         />
-        <GoogleAnalytics gaId="G-Q451BFG64T›" />
+        <GoogleAnalytics gaId="G-HPFD97CLFB›" />
         <Analytics />
       </body>
     </html>

@@ -63,15 +63,17 @@ export default function Venue({ venue }) {
           transition={{ delay: (i + 1) * 0.2 }}
           key={tier.id}
           className={`${styles.venueTier} w-full flex max-lg:flex-col gap-5 xl:gap-10 2xl:gap-14 bg-white p-5 lg:p-7 xl:p-10 `}>
-          <div className="flex flex-col w-full  max-w-[260px] ">
-            <div className={"text-black lg:text-xl"}>
-              <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter mb-5">
-                {tier.title}
-              </p>
-              {tier.prices}
-              {/* {documentToReactComponents(tier?.prices, options)} */}
-            </div>
+          <div
+            className={`${
+              !tier?.prices ? "max-lg:hidden" : ""
+            } text-black lg:text-xl flex flex-col w-full  max-w-[260px] `}>
+            <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter mb-5">
+              {tier.title}
+            </p>
+            {tier.prices}
+            {/* {documentToReactComponents(tier?.prices, options)} */}
           </div>
+
           <div className="h-full w-px bg-black/25"></div>
           <div className="flex flex-col *:list-disc">
             <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter mb-5">
