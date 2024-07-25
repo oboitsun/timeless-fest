@@ -651,6 +651,8 @@ const sandstone = {
             <li>Fireworks, flares or explosives</li>
             <li>Animals (except for authorized assistance dogs)</li>
             <li>Balls, sporting equipment, bicycles, skateboards, skates or scooters</li>
+            <li> Any other object which may be used as a missile or weapon</li>
+            <li>Any other object that the promoter considers inappropriate or dangerous</li>
           </ul>
         </>
       ),
