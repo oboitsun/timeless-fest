@@ -12,13 +12,13 @@ const yarra_valley = {
       prices: (
         <ul>
           <li>
-            GA (Earlybird): <b>$189*</b>
+            GA (Earlybird): <b>$205*</b>
           </li>
           <li>
-            GA (1st Release): <b>$219*</b>
+            GA (1st Release): <b>$236*</b>
           </li>
           <li>
-            GA (Final Release): <b>$229*</b>
+            GA (Final Release): <b>$246*</b>
           </li>
         </ul>
       ),
@@ -34,7 +34,7 @@ const yarra_valley = {
       title: "Golden views experience ",
       prices: (
         <p>
-          <b>$299*</b>
+          <b>$317*</b>
         </p>
       ),
       inclusions: (
@@ -50,7 +50,7 @@ const yarra_valley = {
       title: "VIP + Garden Bar Experience",
       prices: (
         <p>
-          <b>$319*</b>
+          <b>$337*</b>
         </p>
       ),
       inclusions: (
@@ -72,7 +72,7 @@ const yarra_valley = {
       title: " VIP + Conservatory Experience",
       prices: (
         <p>
-          <b>$279*</b>
+          <b>$297*</b>
         </p>
       ),
       inclusions: (
@@ -89,7 +89,7 @@ const yarra_valley = {
       title: " VIP + Deck experience",
       prices: (
         <p>
-          <b>$304*</b>
+          <b>$322*</b>
         </p>
       ),
       inclusions: (
@@ -113,7 +113,7 @@ const yarra_valley = {
       title: "VIP + Restaurant Experience",
       prices: (
         <p>
-          <b>$379*</b>
+          <b>$398*</b>
         </p>
       ),
       inclusions: (
@@ -163,11 +163,11 @@ const hunter_valley = {
       prices: (
         <ul>
           <li>
-            Seat: <b>$399*</b>
+            Seat: <b>$419*</b>
           </li>
-          <li>
+          {/* <li>
             Seat + 4 course dinner: <b>$799*</b>
-          </li>
+          </li> */}
         </ul>
       ),
       inclusions: (
@@ -188,7 +188,7 @@ const hunter_valley = {
       title: "Gold Allocated Seating",
       prices: (
         <p>
-          <b>$299*</b>
+          <b>$317*</b>
         </p>
       ),
       inclusions: <p>Close to stage allocated seating, Express early entry</p>,
@@ -199,10 +199,10 @@ const hunter_valley = {
       prices: (
         <ul>
           <li>
-            Silver seating first release: <b>$219*</b>
+            Silver seating first release: <b>$235*</b>
           </li>
           <li>
-            Silver seating final release: <b>$239*</b>
+            Silver seating final release: <b>$256*</b>
           </li>
         </ul>
       ),
@@ -219,10 +219,10 @@ const hunter_valley = {
       prices: (
         <ul>
           <li>
-            GA (Earlybird): <b>$169*</b>
+            GA (Earlybird): <b>$185*</b>
           </li>
           <li>
-            GA (Final Release): <b>$189*</b>
+            GA (Final Release): <b>$205*</b>
           </li>
         </ul>
       ),
@@ -274,13 +274,13 @@ const sandstone = {
       prices: (
         <ul>
           <li>
-            GA (Earlybird): <b>$189*</b>
+            GA (Earlybird): <b>$205*</b>
           </li>
           <li>
-            GA (1st Release): <b>$219*</b>
+            GA (1st Release): <b>$235*</b>
           </li>
           <li>
-            GA (Final Release): <b>$239*</b>
+            GA (Final Release): <b>$256*</b>
           </li>
           <li>
             <a
@@ -308,7 +308,7 @@ const sandstone = {
         <>
           <p>
             Front of stage, express entry:
-            <b>$299*</b>
+            <b>$317*</b>
           </p>
           <a
             href="https://www.ticketfairy.com/event/timeless-summer-tour-sandstone"
@@ -334,7 +334,7 @@ const sandstone = {
       prices: (
         <>
           <p>
-            <b>$350*</b>
+            <b>$363*</b>
           </p>
           <a
             href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"
@@ -359,7 +359,7 @@ const sandstone = {
       prices: (
         <>
           <p>
-            <b>$360*</b>
+            <b>$373*</b>
           </p>
           <a
             href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"
@@ -385,7 +385,7 @@ const sandstone = {
       prices: (
         <>
           <p>
-            <b>$450*</b>
+            <b>$465*</b>
           </p>
           <a
             href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"

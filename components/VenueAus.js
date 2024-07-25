@@ -96,7 +96,7 @@ export default function Venue({ venue }) {
           alt="Sitemap"
         />
       )}
-      <p className="text-sm">*Booking fees apply</p>
+      <p className="text-sm">* Including Fees</p>
       <FreeHatSection type="small" country="aus" />
       <SitemapModal show={showModal} imgSrc={sitemap} setShow={setShowModal} />
     </div>
