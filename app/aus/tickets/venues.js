@@ -10,17 +10,20 @@ const yarra_valley = {
       id: "ga",
       title: "General Admission",
       prices: (
-        <ul>
-          <li>
-            GA (Earlybird): <b>$205*</b>
-          </li>
-          <li>
-            GA (1st Release): <b>$236*</b>
-          </li>
-          <li>
-            GA (Final Release): <b>$246*</b>
-          </li>
-        </ul>
+        <>
+          <ul>
+            <li>
+              GA (Earlybird): <b>$204.78</b>
+            </li>
+            <li>
+              GA (1st Release): <b>$235.30</b>
+            </li>
+            <li>
+              GA (Final Release): <b>$245.47</b>
+            </li>
+          </ul>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <p>
@@ -33,9 +36,12 @@ const yarra_valley = {
       id: "golden",
       title: "Golden views experience ",
       prices: (
-        <p>
-          <b>$317*</b>
-        </p>
+        <>
+          <p>
+            <b>$316.68</b>
+          </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <p>
@@ -49,9 +55,12 @@ const yarra_valley = {
       id: "vip-garden",
       title: "VIP + Garden Bar Experience",
       prices: (
-        <p>
-          <b>$337*</b>
-        </p>
+        <>
+          <p>
+            <b>$337.03</b>
+          </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <>
@@ -71,9 +80,12 @@ const yarra_valley = {
       id: "vip-conservatory",
       title: " VIP + Conservatory Experience",
       prices: (
-        <p>
-          <b>$297*</b>
-        </p>
+        <>
+          <p>
+            <b>$296.34</b>
+          </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <>
@@ -88,9 +100,12 @@ const yarra_valley = {
       id: "vip-deck",
       title: " VIP + Deck experience",
       prices: (
-        <p>
-          <b>$322*</b>
-        </p>
+        <>
+          <p>
+            <b>$321.77</b>
+          </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <>
@@ -112,9 +127,12 @@ const yarra_valley = {
       id: "vip-restaurant",
       title: "VIP + Restaurant Experience",
       prices: (
-        <p>
-          <b>$398*</b>
-        </p>
+        <>
+          <p>
+            <b>$398.07</b>
+          </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <>
@@ -130,9 +148,24 @@ const yarra_valley = {
       id: "transport",
       title: "Transport",
       prices: (
-        <p>
-          <b>From $42 return</b>
-        </p>
+        <>
+          <p>
+            <b>From $43.03 return</b>
+          </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+          <h5 className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter my-5">
+            Accommodations
+          </h5>
+          <p>
+            Various accommodation options can be found{" "}
+            <a
+              className="underline text-primary"
+              href="https://www.visityarravalley.com.au/stay"
+              target="_blank">
+              here
+            </a>
+          </p>
+        </>
       ),
       inclusions: (
         <ul>
@@ -144,6 +177,25 @@ const yarra_valley = {
             Book a return bus ticket when you purchase your ticket from Ticketfairy. With multiple
             pick up locations and times around Melbourne.
           </li>
+        </ul>
+      ),
+    },
+    {
+      id: "entry",
+      title: "Venue entry conditions",
+      inclusion_title: "EVENT INFORMATION:",
+      prices: <></>,
+      inclusions: (
+        <ul>
+          <li className="italic">Strictly no BYO alcohol or drinks of any kind.</li>
+          <li>Standard camping chairs & picnic rugs permitted.</li>
+          <li>No glass or metal please.</li>
+          <li>
+            1.5 litre sealed clear plastic bottle of water per person permitted, no soft drinks.
+          </li>
+          <li>Fully licenced event - strictly NO BYO alcohol.</li>
+          <li>Limited BYO food allowed to a maximum 26L soft-sided esky. Food trucks on site.</li>
+          <li>No aerosols, no hard eskies.</li>
         </ul>
       ),
     },
@@ -161,14 +213,17 @@ const hunter_valley = {
       id: "golden-views",
       title: "Platinum",
       prices: (
-        <ul>
-          <li>
-            Seat: <b>$419*</b>
-          </li>
-          {/* <li>
-            Seat + 4 course dinner: <b>$799*</b>
+        <>
+          <ul>
+            <li>
+              Seating: <b>$418.41</b>
+            </li>
+            {/* <li>
+            Seat + 4 course dinner: <b>$799</b>
           </li> */}
-        </ul>
+          </ul>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <>
@@ -187,9 +242,13 @@ const hunter_valley = {
       id: "golden-allocated",
       title: "Gold Allocated Seating",
       prices: (
-        <p>
-          <b>$317*</b>
-        </p>
+        <>
+          <p>
+            <b>$316.68</b>
+          </p>
+
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: <p>Close to stage allocated seating, Express early entry</p>,
     },
@@ -197,14 +256,17 @@ const hunter_valley = {
       id: "silver-allocated",
       title: "Silver Allocated Seating",
       prices: (
-        <ul>
-          <li>
-            Silver seating first release: <b>$235*</b>
-          </li>
-          <li>
-            Silver seating final release: <b>$256*</b>
-          </li>
-        </ul>
+        <>
+          <ul>
+            <li>
+              Silver seating first release: <b>$235.30</b>
+            </li>
+            <li>
+              Silver seating final release: <b>$255.65</b>
+            </li>
+          </ul>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <p>
@@ -217,14 +279,17 @@ const hunter_valley = {
       id: "ga",
       title: "General Admission - Standing",
       prices: (
-        <ul>
-          <li>
-            GA (Earlybird): <b>$185*</b>
-          </li>
-          <li>
-            GA (Final Release): <b>$205*</b>
-          </li>
-        </ul>
+        <>
+          <ul>
+            <li>
+              GA (Earlybird): <b>$184.44</b>
+            </li>
+            <li>
+              GA (Final Release): <b>$204.78</b>
+            </li>
+          </ul>{" "}
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
       ),
       inclusions: (
         <>
@@ -240,22 +305,92 @@ const hunter_valley = {
       id: "addon",
       title: "Venue Addons",
       prices: <></>,
+      inclusion_title: "Venue Add on - Cocktail partY:",
       inclusions: (
-        <ul>
-          <li className="mb-7">
-            3.5 hour cocktail party in front of the cellar door with view of the stage. Party begins
-            from gates. Includes beverage (beer, wine, soft drink) and hot and cold cocktail food -
-            <b>$200*</b>
-          </li>
-          <li>
+        <>
+          <ul>
+            <li className="mb-7">
+              3.5 hour cocktail party in front of the cellar door with view of the stage. Party
+              begins from gates. Includes beverage (beer, wine, soft drink) and hot and cold
+              cocktail food -<b>$203.76</b>
+            </li>
+            <li>
+              {" "}
+              Hamper for 2 people - <b>$131.54</b>
+            </li>
+            <li>
+              {" "}
+              Hamper Gluten free or vegetarian options-<b> $141.71</b>
+            </li>
+          </ul>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
+        </>
+      ),
+    },
+    {
+      id: "transport",
+      title: "",
+      prices: null,
+      inclusion_title: "Transport",
+      inclusions: (
+        <>
+          <p>
+            Rover Coaches will be providing coaches to Hope Estate so you can get to the event with
+            ease. You can purchase a shuttle ticket via their website{" "}
+            <a
+              className="underline text-primary"
+              href="https://www.rovercoaches.com.au/site/index.cfm?module=EVENTTICKETING&pagemode=indiv&eventID=2474510#">
+              here
+            </a>
+          </p>
+          <h5 className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter my-5">
+            Accommodations
+          </h5>
+          <p>
+            Various accommodation options can be found{" "}
+            <a
+              className="underline text-primary"
+              href="https://www.winecountry.com.au/accommodation"
+              target="_blank">
+              https://www.winecountry.com.au/accommodation
+            </a>
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "entry",
+      title: "Venue entry conditions",
+      inclusion_title: "EVENT INFORMATION:",
+      prices: <></>,
+      inclusions: (
+        <div className="flex flex-col gap-4">
+          <p>
             {" "}
-            Hamper for 2 people - <b>$129*</b>
-          </li>
-          <li>
-            {" "}
-            Hamper Gluten free or vegetarian options-<b> $139*</b>
-          </li>
-        </ul>
+            Eskies or hard coolers are not permitted into the venue. There are wine cooler bags with
+            free ice refills available from all bars to keep your drinks nice and frosty. Just ask
+            our friendly bar staff.
+          </p>
+          <p>
+            No outside food or drinks may be brought into the venue. There are food trucks and
+            stalls set up with dietary options. There will be water refill stations all over so
+            bring an empty clear water bottle with you. Metal bottles will not be allowed in.
+          </p>
+          <p>
+            Small to medium bags are permitted but be prepared to have them searched at entry by
+            security. Anything deemed too large will not be allowed into the venue as any large
+            objects on the ground become a safety hazard.
+          </p>
+          <p>
+            If you are bringing sunscreen or deodorant please not that aerosols will have to be
+            discarded on entry so make sure you bring roll-on or cream to ensure you can bring it
+            into the venue.
+          </p>
+          <p>
+            We recommend not driving to the event. Please see Rover Coaches for details on coach
+            tickets. If you do decide to drive, there will be free parking available on site.
+          </p>
+        </div>
       ),
     },
   ],
@@ -274,14 +409,15 @@ const sandstone = {
       prices: (
         <ul>
           <li>
-            GA (Earlybird): <b>$205*</b>
+            GA (Earlybird): <b>$204.78</b>
           </li>
           <li>
-            GA (1st Release): <b>$235*</b>
+            GA (1st Release): <b>$235.30</b>
           </li>
           <li>
-            GA (Final Release): <b>$256*</b>
+            GA (Final Release): <b>$255.65</b>
           </li>
+          <li className="text-sm">Inclusive of booking and transaction fees</li>
           <li>
             <a
               href="https://www.ticketfairy.com/event/timeless-summer-tour-sandstone"
@@ -308,8 +444,9 @@ const sandstone = {
         <>
           <p>
             Front of stage, express entry:
-            <b>$317*</b>
-          </p>
+            <b>$316.68</b>
+          </p>{" "}
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
           <a
             href="https://www.ticketfairy.com/event/timeless-summer-tour-sandstone"
             target="_blank"
@@ -334,8 +471,9 @@ const sandstone = {
       prices: (
         <>
           <p>
-            <b>$363*</b>
+            <b>$362.65</b>
           </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
           <a
             href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"
             target="_blank"
@@ -359,8 +497,9 @@ const sandstone = {
       prices: (
         <>
           <p>
-            <b>$373*</b>
+            <b>$372.85</b>
           </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
           <a
             href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"
             target="_blank"
@@ -385,8 +524,9 @@ const sandstone = {
       prices: (
         <>
           <p>
-            <b>$465*</b>
+            <b>$464.65</b>
           </p>
+          <p className="text-sm">Inclusive of booking and transaction fees</p>
           <a
             href="https://sandstonepoint.oztix.com.au/outlet/event/637c7425-a413-4482-bb2a-f06a914a2cf0"
             target="_blank"
@@ -405,6 +545,114 @@ const sandstone = {
           <li>Gourmet buffet</li>
           <li>4-hour beverage package (inc. Beer, wine, sparkling wine, soft drinks & water)</li>
         </ul>
+      ),
+    },
+    {
+      id: "transport",
+      title: "",
+      prices: null,
+      inclusion_title: "Transport",
+      inclusions: (
+        <>
+          <p>
+            Bus passes for Sandstone Point can be purchased via{" "}
+            <a
+              className="underline text-primary"
+              href="https://sandstonepoint.oztix.com.au/outlet/event/576036d1-f722-4a4f-9b21-6e95c9484465?Event=195906">
+              Oztix
+            </a>
+            , you can choose your pick up point at time of purchase so your day can easily be
+            pre-planned.
+          </p>
+          <p>
+            If you intend to drive, carpark passes can be purchased via the same{" "}
+            <a
+              className="underline text-primary"
+              href="https://sandstonepoint.oztix.com.au/outlet/event/576036d1-f722-4a4f-9b21-6e95c9484465?Event=195906">
+              link
+            </a>
+            .
+          </p>
+          <h5 className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter my-5">
+            Accommodations
+          </h5>
+          <p>
+            Accommodation is available at
+            <a
+              className="underline text-primary"
+              href="https://sandstonepointholidayresort.com.au/"
+              target="_blank">
+              https://sandstonepointholidayresort.com.au/
+            </a>
+          </p>
+        </>
+      ),
+    },
+    {
+      id: "entry",
+      title: "Venue entry conditions",
+      inclusion_title: "Entry guidelines:",
+      prices: <></>,
+      inclusions: (
+        <>
+          <ul>
+            <li>
+              For quick entry into the event, please have your bag ready for inspection. It is a
+              condition of entry that a search of person or possessions may take place with
+              prohibited items confiscated by the promoter.
+            </li>
+            <li>
+              As a licensed venue please ensure you have valid ID with you. As this event is 18+
+              only - No ID, No entry
+            </li>
+            <li>
+              No Pass Outs will be allowed. Please ensure you are prepared for the full day of the
+              event.
+            </li>
+            <li>
+              No outside food is allowed, there is a variety of food options available within the
+              venue that cater to intolerances and dietary requirements.
+            </li>
+            <li>
+              As a fully licensed venue, there is a strict no BYO beverages policy. Patrons are
+              allowed (1) sealed bottle of water and the option of free water inside the venue.
+            </li>
+            <li>
+              Low back beach chairs/ festival chairs are allowed providing the legs of the chair do
+              not exceed 20cm. No standard BYO folding chairs are allowed in at any concert.
+              Sandstone Point Hotel’s official festival chairs may be purchased at the venue on the
+              day (subject to availability)
+            </li>
+            <li>No aerosols, no hard eskies.</li>
+          </ul>
+          <p className="font-bold text-lg">Permitted Items:</p>
+          <ul>
+            <li> Festival/beach chair (chair legs 20cm or under)</li>
+            <li>Small picnic rug</li>
+            <li>Sealed bottle of water</li>
+            <li>Rain poncho/jacket</li>
+            <li>Hat</li>
+            <li>Sunscreen</li>
+          </ul>
+          <p className="font-bold text-lg">Prohibited Items</p>
+          <ul>
+            <li> Full height chairs (chair leg must be under 20cm)</li>
+            <li>Professional cameras, audio or video recording devices</li>
+            <li>Umbrellas, tents & sunshades</li>
+            <li>Glass, aluminium & metal containers</li>
+            <li>Drinks or drink bottles of any kind (except a sealed bottle of water)</li>
+            <li>Alcoholic beverages</li>
+            <li>Food</li>
+            <li>Picnic baskets & eskies</li>
+            <li>Illegal or illicit substances of any kind</li>
+            <li>Musical instruments or air horns</li>
+            <li>Poles, sticks, banners or oversized flags</li>
+            <li>Confetti or shredded paper</li>
+            <li>Fireworks, flares or explosives</li>
+            <li>Animals (except for authorized assistance dogs)</li>
+            <li>Balls, sporting equipment, bicycles, skateboards, skates or scooters</li>
+          </ul>
+        </>
       ),
     },
   ],

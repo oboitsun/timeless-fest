@@ -75,7 +75,7 @@ export default function Venue({ venue }) {
           <div className="h-full w-px bg-black/25"></div>
           <div className="flex flex-col *:list-disc">
             <p className="font-matiz uppercase text-black text-lg xl:text-2xl tracking-tighter mb-5">
-              {tier.id === "addon" ? "Venue Add on - Cocktail partY" : " Inclusions:"}
+              {tier.inclusion_title ?? "Inclusions:"}
             </p>
             {/* <ul className="lg:columns-2 gap-x-4 list-disc">
                 {tier?.inclusions?.map((l, i) => (
@@ -96,7 +96,7 @@ export default function Venue({ venue }) {
           alt="Sitemap"
         />
       )}
-      <p className="text-sm">* Including Fees</p>
+
       <FreeHatSection type="small" country="aus" />
       <SitemapModal show={showModal} imgSrc={sitemap} setShow={setShowModal} />
     </div>
