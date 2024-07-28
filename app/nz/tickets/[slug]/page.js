@@ -48,6 +48,7 @@ export default async function TicketPage({ params }) {
           <Heading>Venue Entry Conditions and FAQ</Heading>
 
           <Link
+            prefetch={false}
             className="bg-black uppercase py-5 px-8 text-xl font-matiz flex w-max text-white "
             href={`/aus/faq`}>
             read more

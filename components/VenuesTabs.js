@@ -15,6 +15,7 @@ export default function VenuesTabs({ city, venues, item = "tickets", country = "
               key={v?.sys?.id ?? v?.fields?.slug}
               className="min-w-max lg:border-b border-b-black/25">
               <Link
+                prefetch={false}
                 href={`/${country}/${item}/${v?.fields?.slug}`}
                 className={`inline-flex text-lg lg:text-xl font-matiz uppercase lg:py-5 2xl:py-8  cursor-pointer hover:text-primary/90 min-w-max ${
                   v?.fields?.slug === city ? "text-primary" : "text-black"
