@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useCallback } from "react";
 import PromoModal from "../PromoModal";
 import { SpotifyIcon } from "../UI/icons";
 import styles from "./Hero.module.scss";
@@ -48,6 +49,11 @@ const childVariants = {
 };
 
 export default function HeroSection({ country = "nz" }) {
+  const openBuyModal = useCallback(() => {
+    const event = new CustomEvent("showBuyModal");
+
+    document.dispatchEvent(event);
+  }, []);
   return (
     <section className={`${styles.section} gradient`}>
       <Image
@@ -74,6 +80,9 @@ export default function HeroSection({ country = "nz" }) {
               Summer Tour
             </motion.h1>
           </div>
+          <button onClick={(e) => openBuyModal(e)} className={styles.buy}>
+            <span className="relative top-px">buy tickets</span>
+          </button>
           <motion.div
             initial={{ opacity: 0, y: "15%" }}
             transition={{ delay: 0.7 }}
