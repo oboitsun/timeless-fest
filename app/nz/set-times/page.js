@@ -26,7 +26,7 @@ export default async function SetTimes() {
       <div className="wrap flex flex-col gap-5  text-black lg:tex-xl">
         <Heading addClasses="pb-5">Set Times</Heading>
 
-        <VenuesTabs country="nz" city={"chirstchurch"} venues={venues} item="set-times" />
+        <VenuesTabs country="nz" city={"christchurch"} venues={venues} item="set-times" />
       </div>
     </section>
   );
