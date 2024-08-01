@@ -128,7 +128,7 @@ export default function Venue({ venue }) {
           <></>
         )
       )}
-      <p className="text-sm">*Booking fees apply</p>
+
       <FreeHatSection type="small" />
     </div>
   );
