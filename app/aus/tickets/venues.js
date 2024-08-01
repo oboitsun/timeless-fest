@@ -13,13 +13,13 @@ const yarra_valley = {
         <>
           <ul>
             <li>
-              GA (Earlybird): <b>$204.78</b>
+              GA (Earlybird): <b>$200.71</b>
             </li>
             <li>
-              GA (1st Release): <b>$235.30</b>
+              GA (1st Release): <b>$231.23</b>
             </li>
             <li>
-              GA (Final Release): <b>$245.47</b>
+              GA (Final Release): <b>$241.4</b>
             </li>
           </ul>
           <p className="text-sm">Inclusive of booking and transaction fees</p>
@@ -38,7 +38,7 @@ const yarra_valley = {
       prices: (
         <>
           <p>
-            <b>$316.68</b>
+            <b>$312.61</b>
           </p>
           <p className="text-sm">Inclusive of booking and transaction fees</p>
         </>
@@ -57,7 +57,7 @@ const yarra_valley = {
       prices: (
         <>
           <p>
-            <b>$337.03</b>
+            <b>$332.96</b>
           </p>
           <p className="text-sm">Inclusive of booking and transaction fees</p>
         </>
@@ -82,7 +82,7 @@ const yarra_valley = {
       prices: (
         <>
           <p>
-            <b>$296.34</b>
+            <b>$292.27</b>
           </p>
           <p className="text-sm">Inclusive of booking and transaction fees</p>
         </>
@@ -102,7 +102,7 @@ const yarra_valley = {
       prices: (
         <>
           <p>
-            <b>$321.77</b>
+            <b>$317.7</b>
           </p>
           <p className="text-sm">Inclusive of booking and transaction fees</p>
         </>
@@ -129,7 +129,7 @@ const yarra_valley = {
       prices: (
         <>
           <p>
-            <b>$398.07</b>
+            <b>$394</b>
           </p>
           <p className="text-sm">Inclusive of booking and transaction fees</p>
         </>
@@ -219,7 +219,7 @@ const hunter_valley = {
         <>
           <ul>
             <li>
-              Seating: <b>$418.41</b>
+              Seating: <b>$414.34</b>
             </li>
             {/* <li>
             Seat + 4 course dinner: <b>$799</b>
@@ -262,10 +262,10 @@ const hunter_valley = {
         <>
           <ul>
             <li>
-              Silver seating first release: <b>$235.30</b>
+              Silver seating first release: <b>$231.23</b>
             </li>
             <li>
-              Silver seating final release: <b>$255.65</b>
+              Silver seating final release: <b>$251.58</b>
             </li>
           </ul>
           <p className="text-sm">Inclusive of booking and transaction fees</p>
@@ -285,10 +285,10 @@ const hunter_valley = {
         <>
           <ul>
             <li>
-              GA (Earlybird): <b>$184.44</b>
+              GA (Earlybird): <b>$180.37</b>
             </li>
             <li>
-              GA (Final Release): <b>$204.78</b>
+              GA (Final Release): <b>$200.71</b>
             </li>
           </ul>{" "}
           <p className="text-sm">Inclusive of booking and transaction fees</p>
@@ -412,13 +412,13 @@ const sandstone = {
       prices: (
         <ul>
           <li>
-            GA (Earlybird): <b>$204.78</b>
+            GA (Earlybird): <b>$200.71</b>
           </li>
           <li>
-            GA (1st Release): <b>$235.30</b>
+            GA (1st Release): <b>$231.23</b>
           </li>
           <li>
-            GA (Final Release): <b>$255.65</b>
+            GA (Final Release): <b>$251.58</b>
           </li>
           <li className="text-sm">Inclusive of booking and transaction fees</li>
           <li>
@@ -447,7 +447,7 @@ const sandstone = {
         <>
           <p>
             Front of stage, express entry:
-            <b>$316.68</b>
+            <b>$312.61</b>
           </p>{" "}
           <p className="text-sm">Inclusive of booking and transaction fees</p>
           <a
