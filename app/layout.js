@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import "./globals.css";
 export const metadata = {
-  title: "Timeless Festival",
+  title: "Timeless Summer Tour",
   description:
     " Creating Timeless Live music and entertainment experiences that convert into forever  memories",
 };
