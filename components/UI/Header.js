@@ -83,7 +83,7 @@ export default function Header({ country }) {
               quality="100"
               width={161}
               height={99}
-              src={"/logo.png"}
+              src={country === "nz" ? "/home/logo-nz.png" : "/home/logo-aus.png"}
               alt="Logo"
             />
           </Link>

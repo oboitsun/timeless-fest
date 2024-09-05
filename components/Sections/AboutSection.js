@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import Heading from "../UI/Heading";
-
+import styles from "./AboutSection.module.scss";
 export default function AboutSection({ country }) {
   return (
-    <section className="bg-orange py-10 lg:py-20 xl:py-40 text-black ">
+    <section className={`${styles.section} ${styles[country]}`}>
       <div className="wrap flex max-lg:flex-col gap-5 lg:gap-10 2xl:gap-20">
         <div className="flex-1 w-full">
-          <Heading>ABOUT TIMELESS SUMMER TOUR</Heading>
+          <Heading addClasses={styles.heading}>ABOUT TIMELESS SUMMER TOUR</Heading>
           {country === "aus" ? (
             <>
               <p className="pt-4 font-semibold xl:text-xl  xl:leading-relaxed">
