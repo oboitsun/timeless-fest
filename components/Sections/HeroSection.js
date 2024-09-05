@@ -47,7 +47,10 @@ const childVariants = {
     x: custom.x, // example custom property
   }),
 };
-
+const backs = {
+  nz: "/home/bg-nz.jpg",
+  aus: "/home/bg-aus.jpg",
+};
 export default function HeroSection({ country = "nz" }) {
   const openBuyModal = useCallback(() => {
     const event = new CustomEvent("showBuyModal");
@@ -55,11 +58,11 @@ export default function HeroSection({ country = "nz" }) {
     document.dispatchEvent(event);
   }, []);
   return (
-    <section className={`${styles.section} gradient`}>
+    <section className={`${styles.section} gradient min-h-svh`}>
       <Image
         className="opacity-90 object-cover w-full h-full z-0"
         fill
-        src="/vintage-texture.png"
+        src={backs?.[country]}
         alt="texture"
       />
       <div className="wrap flex flex-col items-center justify-center h-1/2 flex-grow relative  ">
