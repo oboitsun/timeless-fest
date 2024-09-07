@@ -70,14 +70,14 @@ export default function Header({ country }) {
   return (
     <>
       <nav
-        className={`${styles.nav} ${isHome ? styles.fixed : ""} ${
+        className={`${styles.nav} ${styles?.[country]} ${isHome ? styles.fixed : ""} ${
           scrolled || open ? styles.scrolled : ""
         } overflow-x-hidden`}>
         <div className="wrap flex justify-between items-center gap-10 w-full">
           <Link
             prefetch={false}
             href={`/${country}`}
-            className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10">
+            className="xl:w-[10vh] max-xl:w-[15vw] max-w-max flex-shrink-0  z-10 ">
             <Image
               className="w-full "
               quality="100"
@@ -95,7 +95,7 @@ export default function Header({ country }) {
                   prefetch={false}
                   key={l.href}
                   href={`/${country}/${l.href}`}
-                  className={`${styles.link} min-w-max  ${
+                  className={`${styles.link} min-w-max   ${
                     location === `/${country}/${l.href}` ? styles.active : ""
                   }`}>
                   {l.label}
