@@ -29,7 +29,7 @@ const countries_data = {
       { date: "11 jan", city: "christchurch", venue: "QEII" },
       { date: "12 jan", city: "napier", venue: "church rd winery" },
       { date: "16 jan", city: "new plymouth", venue: "bowl of brooklands" },
-      { date: "18 jan", city: "Tauranga", venue: "venue tbc" },
+      { date: "18 jan", city: "Tauranga", venue: "venue Baypark" },
       { date: "19 jan", city: "Auckland", venue: "Auckland Showgrounds" },
     ],
   },
@@ -42,7 +42,7 @@ const countries_data = {
     dates: [
       { date: "24 jan", city: "Yarra Valley, VIC", venue: "Rochford Wines" },
       { date: "25 jan", city: "Hunter Valley, NSW", venue: "Hope Estate" },
-      { date: "27 jan", city: "Sandstone Point, QLD", venue: "Sandston Point Hotel" },
+      { date: "27 jan", city: "Sandstone Point, QLD", venue: "Sandstone Point Hotel" },
     ],
   },
 };
