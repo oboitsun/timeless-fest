@@ -83,7 +83,7 @@ export default function HeroSection({ country = "nz" }) {
     document.dispatchEvent(event);
   }, []);
   return (
-    <section className={`${styles.section} gradient min-h-svh`}>
+    <section className={`${styles.section} gradient max-lg:min-h-svh lg:min-h-[80vh]`}>
       <Image
         className="opacity-90 object-cover w-full h-full z-0"
         fill
