@@ -7,7 +7,40 @@
 }
 .p {
   @apply font-back text-6xl uppercase text-pale-gray leading-none;
-  font-size: clamp(24px, 6vw, 104px);
+  font-size: clamp(24px, 3vw, 40px);
+}
+.dates {
+  @apply flex justify-center  flex-wrap gap-4 lg:gap-5 lg:w-10/12 w-full;
+  &.aus {
+    @apply lg:w-full;
+    .dateItem {
+      @apply flex flex-col items-center font-back uppercase leading-none mb-3 gap-px min-w-max;
+      flex: 0 1 25%;
+      &:nth-child(1),
+      &:nth-child(2) {
+        flex: 0 1 25%;
+      }
+    }
+  }
+}
+.dateItem {
+  @apply flex flex-col items-center font-back uppercase leading-none mb-3 gap-px;
+  flex: 0 1 30%;
+  &:nth-child(1),
+  &:nth-child(2) {
+    flex: 0 1 40%;
+  }
+  .day {
+    font-size: clamp(24px, 2.5vw, 40px);
+  }
+  .venue {
+    @apply text-center;
+    font-size: clamp(12px, 1.2vw, 14px);
+  }
+  .city {
+    @apply text-center;
+    font-size: clamp(14px, 1.2vw, 16px);
+  }
 }
 .buy {
   min-width: max-content;

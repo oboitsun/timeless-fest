@@ -73,7 +73,7 @@ img {
 }
 
 .promo-btn {
-  @apply bg-pale-gray font-matiz uppercase flex items-center gap-2 text-black text-sm lg:text-lg leading-none relative max-xl:mt-5 px-5 py-2 lg:px-8 lg:py-5;
+  @apply bg-pale-gray font-matiz uppercase flex items-center gap-2 text-black text-sm lg:text-lg leading-none relative max-xl:mt-3 px-5 py-3 justify-center lg:px-6 lg:py-3;
 
 
   transition: all 0.4s;
@@ -84,27 +84,12 @@ img {
     @apply relative;
   }
 
-  .button-lines::after,
-  .button-lines::before {
-    z-index: 2;
-    content: '';
-    @apply absolute top-1/2 bg-primary/90 h-px;
-    width: clamp(40px, 15vw, 240px);
-  }
 
-  .button-lines::after {
-    left: calc(100% + clamp(10px, 4vw, 40px));
-    transform: translate(0, -50%);
-  }
-
-  .button-lines::before {
-    right: calc(100% + clamp(10px, 4vw, 40px));
-    transform: translate(0, -50%);
-  }
 }
 
 .promo-btn span,
 .promo-btn svg {
+  font-size: clamp(12px, 0.7vw, 18px);
   transition: all 0.1s;
 }
 
@@ -155,4 +140,9 @@ img {
   100% {
     background-position: 100% 50%;
   }
+}
+
+.text-stroke {
+  letter-spacing: -0.02em;
+  text-shadow: rgb(34, 36, 42) 2px 0px 0px, rgb(34, 36, 42) 1.75517px 0.958851px 0px, rgb(34, 36, 42) 1.0806px 1.68294px 0px, rgb(34, 36, 42) 0.141474px 1.99499px 0px, rgb(34, 36, 42) -0.832294px 1.81859px 0px, rgb(34, 36, 42) -1.60229px 1.19694px 0px, rgb(34, 36, 42) -1.97998px 0.28224px 0px, rgb(34, 36, 42) -1.87291px -0.701566px 0px, rgb(34, 36, 42) -1.30729px -1.5136px 0px, rgb(34, 36, 42) -0.421592px -1.95506px 0px, rgb(34, 36, 42) 0.567324px -1.91785px 0px, rgb(34, 36, 42) 1.41734px -1.41108px 0px, rgb(34, 36, 42) 1.92034px -0.558831px 0px;
 }

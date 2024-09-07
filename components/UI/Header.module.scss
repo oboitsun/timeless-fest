@@ -40,6 +40,11 @@
       background: white;
     }
   }
+  &.fixed.aus {
+    .link {
+      color: black;
+    }
+  }
   &.fixed.scrolled {
     @apply bg-pale-gray py-2 lg:py-3  border-b-black/25;
     svg {
@@ -50,6 +55,7 @@
     }
     .link {
       @apply text-black;
+      text-shadow: none;
     }
     .line-top,
     .line-middle,

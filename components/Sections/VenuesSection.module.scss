@@ -1,7 +1,15 @@
 .section {
   @apply bg-pale-gray relative  w-full py-10 lg:py-20 2xl:py-40;
 
-  background: #f0ece4 url("../../assets/vintage-texture.png");
+  &.aus {
+    background: #f0ece4 url("../../assets/vintage-texture.png");
+  }
+  &.nz {
+    background: #ff5400 url("../../assets/vintage-texture.png");
+    .heading {
+      color: white;
+    }
+  }
 }
 .venuesList {
   @apply pt-5 lg:pt-8 xl:pt-14 flex flex-col gap-5 lg:gap-7 xl:gap-10 w-full;

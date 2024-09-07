@@ -18,9 +18,9 @@ export async function getVenues(country) {
 export default async function VenuesSection({ country = "nz" }) {
   const venuesRes = await getVenues(country);
   return (
-    <section className={`${styles.section}`}>
+    <section className={`${styles.section} ${styles[country]}`}>
       <div className="wrap relative z-10 ">
-        <Heading addClasses="text-center">Timeless Summer Tour</Heading>
+        <Heading addClasses={`text-center ${styles.heading}`}>Timeless Summer Tour</Heading>
         <div className={styles.venuesList}>
           {venuesRes
             .sort((a, b) => a?.fields?.order - b?.fields?.order)

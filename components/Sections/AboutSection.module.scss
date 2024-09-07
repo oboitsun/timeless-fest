@@ -1,0 +1,11 @@
+.section {
+  @apply bg-orange py-10 lg:py-20 xl:py-40 text-black;
+  &.nz {
+    background: #f0ece4 url("../../assets/vintage-texture.png");
+    .heading {
+    }
+  }
+  &.aus {
+    background: #ff5400 url("../../assets/vintage-texture.png");
+  }
+}
