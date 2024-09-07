@@ -78,6 +78,9 @@
       top: 0;
       left: 0;
       z-index: 20;
+      &.aus {
+        padding-top: 4%;
+      }
       .link {
         @apply text-white hover:text-primary;
       }
