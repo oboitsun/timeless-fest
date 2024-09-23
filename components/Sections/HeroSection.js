@@ -29,7 +29,7 @@ const countries_data = {
       { date: "11 jan", city: "christchurch", venue: "QEII" },
       { date: "12 jan", city: "napier", venue: "church rd winery" },
       { date: "16 jan", city: "new plymouth", venue: "bowl of brooklands" },
-      { date: "18 jan", city: "Tauranga", venue: "venue Baypark" },
+      { date: "18 jan", city: "Tauranga", venue: "Wharepai Domain" },
       { date: "19 jan", city: "Auckland", venue: "Auckland Showgrounds" },
     ],
   },
