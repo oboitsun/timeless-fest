@@ -55,7 +55,7 @@ export default function Venue({ venue }) {
         </div>
       ) : (
         ""
-      )}
+      )}{" "}
       {tiers.map((tier, i) => (
         <motion.div
           initial={{ opacity: 0 }}
@@ -98,7 +98,6 @@ export default function Venue({ venue }) {
           alt="Sitemap"
         />
       )}
-
       <FreeHatSection type="small" country="aus" />
       <SitemapModal show={showModal} imgSrc={sitemap} setShow={setShowModal} />
     </div>

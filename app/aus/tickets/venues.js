@@ -4,8 +4,28 @@ const yarra_valley = {
   time: "JAN 24;2PM-10PM",
   order: 1,
   ticketLink: "https://www.ticketfairy.com/event/timeless-summer-tour-yarra-valley",
-  sitemap: "/venues/yarra-valley-sitemap.jpeg",
+  sitemap: "/venues/sitemap-yarra-valley.jpg",
   tiers: [
+    {
+      id: "casual",
+      title: "Casual Views",
+      prices: (
+        <>
+          <b>$159</b>
+          <p className="text-sm">Plus booking fees</p>
+        </>
+      ),
+      inclusions: (
+        <ul className="lg:columns-2 gap-x-4 list-disc">
+          <li>Entry into Timeless Summer Tour.</li>
+          <li>Admission to the relaxed Casual Views area.</li>
+          <li>Access to food and merchandise vendors.</li>
+          <li>Access to bars and toilets.</li>
+          <li>Access to water refill stations.</li>
+          <li>The experience of seeing some of your favourite legendary artists perform live.</li>
+        </ul>
+      ),
+    },
     {
       id: "ga",
       title: "General Admission",
@@ -210,8 +230,28 @@ const hunter_valley = {
   time: "JAN 25;3:30PM-10PM",
   order: 2,
   ticketLink: "https://www.ticketfairy.com/event/timeless-summer-tour-hunter-valley",
-  sitemap: "/venues/hunter-valley-sitemap.jpeg",
+  sitemap: "/venues/sitemap-hunter-valley.jpg",
   tiers: [
+    {
+      id: "casual",
+      title: "Casual Views",
+      prices: (
+        <>
+          <b>$159</b>
+          <p className="text-sm">Plus booking fees</p>
+        </>
+      ),
+      inclusions: (
+        <ul className="lg:columns-2 gap-x-4 list-disc">
+          <li>Entry into Timeless Summer Tour.</li>
+          <li>Admission to the relaxed Casual Views area.</li>
+          <li>Access to food and merchandise vendors.</li>
+          <li>Access to bars and toilets.</li>
+          <li>Access to water refill stations.</li>
+          <li>The experience of seeing some of your favourite legendary artists perform live.</li>
+        </ul>
+      ),
+    },
     {
       id: "golden-views",
       title: "Platinum",
@@ -403,9 +443,37 @@ const sandstone = {
   title: "Sandstone",
   time: "JAN 27;1PM-8:30PM",
   slug: "sandstone",
-  sitemap: "/venues/sandstone-sitemap.jpeg",
+  sitemap: "/venues/sitemap-sand-stone-point.jpg",
   order: 3,
   tiers: [
+    {
+      id: "casual",
+      title: "Casual Views",
+      prices: (
+        <>
+          <b>$159</b>
+          <p className="text-sm">Plus booking fees</p>
+          <a
+            href="https://www.ticketfairy.com/event/timeless-summer-tour-sandstone"
+            target="_blank"
+            className={
+              "inline-flex justify-center w-full mt-3 bg-primary border-2 border-black text-center uppercase font-back text-lg  lg:text-2xl py-2 lg:py-4 hover:bg-black hover:text-white hover:shadow-lg transition-all"
+            }>
+            <span className="">Buy Tickets Now</span>
+          </a>
+        </>
+      ),
+      inclusions: (
+        <ul className="lg:columns-2 gap-x-4 list-disc">
+          <li>Entry into Timeless Summer Tour.</li>
+          <li>Admission to the relaxed Casual Views area.</li>
+          <li>Access to food and merchandise vendors.</li>
+          <li>Access to bars and toilets.</li>
+          <li>Access to water refill stations.</li>
+          <li>The experience of seeing some of your favourite legendary artists perform live.</li>
+        </ul>
+      ),
+    },
     {
       id: "ga",
       title: "General Admission",
