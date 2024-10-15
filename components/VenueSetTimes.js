@@ -44,7 +44,15 @@ export default function VenueSetTimes({ venue }) {
               <div
                 key={i}
                 className="w-full flex items-center justify-between py-2 lg:py-3 [&:not(:last-child)]:border-b  font-matiz uppercase text-xl">
-                <p>{name}</p>
+                <p>
+                  {name.includes("Spandau") ? (
+                    <>
+                      Tony Hadley <i className="text-sm">ex.</i>Spandau Ballet
+                    </>
+                  ) : (
+                    name
+                  )}
+                </p>
                 <p>{time}</p>
               </div>
             );
